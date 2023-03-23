@@ -1,3 +1,19 @@
-# sp23-egd220-project03-section06-team01
+# Game Studio I | Project 3 | Section 6 | Team 1
 
-hi redmine :)
+REPO NAMING CONVENTION:
+
+Art Assets: 
+
+Environment[Name].png 
+
+Sprite[Name].png
+
+Documents: 
+
+Sprint[Sprint Number][Name][FirstNameLastName].pdf
+
+Sounds Assets: 
+
+SFX[Name].mp3 
+
+Music[Name].mp3
