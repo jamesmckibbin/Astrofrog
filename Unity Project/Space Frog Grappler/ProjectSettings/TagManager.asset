@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tongueable
+  - Fly
+  - Harmful
+  - Tongue
+  - Poisonous
   layers:
   - Default
   - TransparentFX
