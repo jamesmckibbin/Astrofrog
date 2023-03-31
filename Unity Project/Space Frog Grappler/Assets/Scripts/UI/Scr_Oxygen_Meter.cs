@@ -16,6 +16,7 @@ public class Scr_Oxygen_Meter : MonoBehaviour
     void Start()
     {
         oxygenMeter = GetComponent<Slider>();
+        OxygenValue = maxOxygenValue;
     }
 
     // Adjusts the oxygen meter and sets the bar on the UI
