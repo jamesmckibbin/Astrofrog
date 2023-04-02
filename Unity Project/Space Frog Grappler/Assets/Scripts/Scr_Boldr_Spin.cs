@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scr_Boldr_Spin : MonoBehaviour
 {
-    public float SpinSpeed;
+    [SerializeField] float SpinSpeed;
 
     //A spinning wall... How curious.
     void FixedUpdate()
