@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class Scr_Fly_Base : MonoBehaviour
 {
-    private bool grabbed = false;
-    Transform tongue;
+    public bool grabbed = false;
+    private Transform tongue;
 
+    //In order to not 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        //Attaches the fly to the tongue if the other collider in question belongs to the tongue
+        if (col.tag == "Tongue")
+        grabbed = true;
+        tongue = col.transform;
+        
+        //Makes it so the fly will be eaten once it collides with the frog's body
+        if (col.tag == "Player")
+        {
+            Destroy(this.gameObject);
+
+            if (tag == "Poisonous")
+            {GameObject.Find("Frog").GetComponent<Scr_Frog_Hurt>().Pain();}
+        }
+    }
+
+    //The fly follows the movements of the tip of the tongue, so it will be reeled in when the tongue retracts.
     void Update()
     {
         if (grabbed)
         {transform.position = tongue.position;}
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Tongue")
-        grabbed = true;
-        tongue = col.transform;
-
-        if (col.tag == "Player")
-        {Destroy(this.gameObject);}
     }
 }

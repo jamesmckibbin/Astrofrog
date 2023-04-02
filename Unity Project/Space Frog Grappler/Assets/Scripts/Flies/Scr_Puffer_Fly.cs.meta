@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 8238987d5409bba45bf4a4b8409759db
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Frog: {fileID: 1872477949694520949, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
+  - flyRender: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
