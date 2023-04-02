@@ -7,6 +7,6 @@ public class Scr_Boldr_Spin : MonoBehaviour
     public float SpinSpeed;
 
     //A spinning wall... How curious.
-    void Update()
+    void FixedUpdate()
     {transform.Rotate(0.0f, 0.0f, SpinSpeed);}
 }

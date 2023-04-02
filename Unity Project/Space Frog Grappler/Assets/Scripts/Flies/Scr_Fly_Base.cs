@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scr_Fly_Base : MonoBehaviour
 {
-    private bool grabbed = false;
+    public bool grabbed = false;
     private Transform tongue;
 
     //In order to not 
