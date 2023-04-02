@@ -24,7 +24,7 @@ public class Scr_Puffer_Fly : MonoBehaviour
     //Checks the distance between the fly and the frog. If it's within a set distance the fly will become safe to eat.
     void DistanceCheck()
     {
-        if (Vector2.Distance(transform.position, frog.transform.position) <= 3.0f)
+        if (Vector2.Distance(transform.position, frog.transform.position) <= 5.0f)
         {
             gameObject.tag = "Fly";
             flyRender.material.color = Color.black;
