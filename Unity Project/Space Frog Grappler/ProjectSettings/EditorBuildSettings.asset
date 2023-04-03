@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sce_Willow_Testing.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Sce_James_Testing.unity
+    guid: bee3e2ee152bebd4fa5ba885776c0c85
   m_configObjects: {}

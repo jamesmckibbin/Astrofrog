@@ -10,5 +10,6 @@ public class Scr_Frog_Hurt : MonoBehaviour
     {
         //Insert bad things here
         print("oof ouchies that hurts!");
+        FindObjectOfType<Scr_Oxygen_Meter>().RemoveOxygen(25);
     }
 }

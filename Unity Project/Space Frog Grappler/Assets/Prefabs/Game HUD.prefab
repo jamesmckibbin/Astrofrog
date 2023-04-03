@@ -320,7 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072f676e0f3799643b74522429f3bf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OxygenValue: 50
+  CurrentOxygen: 0
+  OxygenMeterBar: {fileID: 6188538123571812890}
 --- !u!1 &6188538125129517471
 GameObject:
   m_ObjectHideFlags: 0

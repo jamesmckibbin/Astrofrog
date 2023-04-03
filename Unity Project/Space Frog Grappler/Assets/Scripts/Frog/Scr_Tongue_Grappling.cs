@@ -34,7 +34,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
             Vector3 baseForce = Vector3.Normalize(transform.position - frog.transform.position) * tongueStrength;
             float distScale = Mathf.Clamp((Vector2.Distance(transform.position, frog.transform.position) - tongueRange), 0, velClamp);
             if (frog.GetComponent<Rigidbody2D>().velocity.magnitude < velClamp)
-                frog.GetComponent<Rigidbody2D>().AddForce(new Vector2(baseForce.x * distScale, baseForce.y * distScale));
+                frog.GetComponent<Rigidbody2D>().AddForce(new Vector2(baseForce.x * distScale, baseForce.y * ((distScale + 1) / 2)));
         }
         if (transform.parent != null)
         {
