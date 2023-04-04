@@ -10,6 +10,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
     [SerializeField] private Transform frog;
     [SerializeField] private string[] tonguePassThroughTags; //list of object tags that the tongue will not attach to or bounce off of
     [SerializeField] private float shootSpeed, retractSpeed, maxRange, tongueRange, tongueStrength, velClamp;
+    [SerializeField] private LineRenderer tongueLR;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,14 @@ public class Scr_Tongue_Grappling : MonoBehaviour
     {
         if (flying)
         {
+            Vector3[] positions = new Vector3[2] { frog.position, transform.position };
+            tongueLR.SetPositions(positions);
             UnparentedMove();
+        }
+        else
+        {
+            Vector3[] positions = new Vector3[2] { new Vector3(0, 0, 0), new Vector3(0, 0, 0) };
+            tongueLR.SetPositions(positions);
         }
     }
 
@@ -34,11 +42,11 @@ public class Scr_Tongue_Grappling : MonoBehaviour
             Vector3 baseForce = Vector3.Normalize(transform.position - frog.transform.position) * tongueStrength;
             float distScale = Mathf.Clamp((Vector2.Distance(transform.position, frog.transform.position) - tongueRange), 0, velClamp);
             if (frog.GetComponent<Rigidbody2D>().velocity.magnitude < velClamp)
-                frog.GetComponent<Rigidbody2D>().AddForce(new Vector2(baseForce.x * distScale, baseForce.y * ((distScale + 1) / 2)));
+                frog.GetComponent<Rigidbody2D>().AddForce(new Vector2(baseForce.x * distScale, baseForce.y * 2));
         }
         if (transform.parent != null)
         {
-            transform.localPosition = new Vector3(0, 0.5f);
+            transform.localPosition = new Vector3(0, 0);
             transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
@@ -52,7 +60,6 @@ public class Scr_Tongue_Grappling : MonoBehaviour
             {
                 attached = true;
                 outgoing = false;
-                transform.position = collision.transform.position;
             }
             else if (System.Array.IndexOf(tonguePassThroughTags, collision.gameObject.tag) != -1)
             {

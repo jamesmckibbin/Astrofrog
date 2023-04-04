@@ -844,6 +844,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6009343302610081998, guid: 0e96d9b39c7cd6642a3d45d70dbe8028, type: 3}
+      propertyPath: OxygenMeter
+      value: 
+      objectReference: {fileID: 1753775577}
+    - target: {fileID: 6009343302610081998, guid: 0e96d9b39c7cd6642a3d45d70dbe8028, type: 3}
       propertyPath: oxygenMeter
       value: 
       objectReference: {fileID: 1753775577}

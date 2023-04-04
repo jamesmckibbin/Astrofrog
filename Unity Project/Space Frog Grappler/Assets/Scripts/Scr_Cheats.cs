@@ -14,6 +14,10 @@ public class Scr_Cheats : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+
+        }
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             OxygenMeter.SetMaxOxygen(10);
