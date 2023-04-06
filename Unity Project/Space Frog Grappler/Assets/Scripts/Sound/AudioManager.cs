@@ -7,10 +7,11 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     //These clips each hold one sound effect that can be called via a function.
-    public AudioClip chomp;
+    public AudioClip Chomp;
     public AudioClip TongueLaunch;
     public AudioClip TongueHit;
     public AudioClip TongueRetract;
+    public AudioClip Bonk;
 
 
     //Creates an audiomanager instance and and audiosurce
@@ -45,9 +46,12 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                instance.source.Stop();
-                instance.source.clip = instance.chomp;
-                instance.source.Play();
+                if (source.clip != Chomp)
+                {
+                    instance.source.Stop();
+                    instance.source.clip = instance.Chomp;
+                    instance.source.Play();
+                }
             }
         }
     }
@@ -58,9 +62,12 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                instance.source.Stop();
-                instance.source.clip = instance.TongueLaunch;
-                instance.source.Play();
+                if (source.clip != TongueLaunch)
+                {
+                    instance.source.Stop();
+                    instance.source.clip = instance.TongueLaunch;
+                    instance.source.Play();
+                }
             }
         }
     }
@@ -71,9 +78,12 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                instance.source.Stop();
-                instance.source.clip = instance.TongueHit;
-                instance.source.Play();
+                if (source.clip != TongueHit)
+                {
+                    instance.source.Stop();
+                    instance.source.clip = instance.TongueHit;
+                    instance.source.Play();
+                }
             }
         }
     }
@@ -84,9 +94,28 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                instance.source.Stop();
-                instance.source.clip = instance.TongueRetract;
-                instance.source.Play();
+                if (source.clip != TongueRetract)
+                {
+                    instance.source.Stop();
+                    instance.source.clip = instance.TongueRetract;
+                    instance.source.Play();
+                }
+            }
+        }
+    }
+
+    public void BonkSFX()
+    {
+        if (instance != null)
+        {
+            if (instance.source != null)
+            {
+                if (source.clip != Bonk)
+                {
+                    instance.source.Stop();
+                    instance.source.clip = instance.Bonk;
+                    instance.source.Play();
+                }
             }
         }
     }

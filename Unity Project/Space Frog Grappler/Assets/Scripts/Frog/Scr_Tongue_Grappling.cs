@@ -99,6 +99,8 @@ public class Scr_Tongue_Grappling : MonoBehaviour
 
     private void Shoot()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().TongueLaunchSFX();
+
         Debug.Log("pew");
         flying = true;
         outgoing = true;
@@ -108,6 +110,8 @@ public class Scr_Tongue_Grappling : MonoBehaviour
 
     private void Retract()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().TongueRetractSFX();
+
         attached = false;
         outgoing = false;
         flying = true;
