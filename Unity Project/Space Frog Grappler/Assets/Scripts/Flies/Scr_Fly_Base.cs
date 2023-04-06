@@ -18,6 +18,9 @@ public class Scr_Fly_Base : MonoBehaviour
         //Makes it so the fly will be eaten once it collides with the frog's body
         if (col.tag == "Player")
         {
+            //Plays chomping sound effect
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().ChompSFX();
+
             Destroy(this.gameObject);
 
             if (tag == "Poisonous")

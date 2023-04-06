@@ -9,6 +9,8 @@ TagManager:
   - Harmful
   - Tongue
   - Poisonous
+  - MainMenuMusic
+  - Level1Music
   layers:
   - Default
   - TransparentFX

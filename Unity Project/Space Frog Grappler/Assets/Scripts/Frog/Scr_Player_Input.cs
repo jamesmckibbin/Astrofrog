@@ -24,10 +24,12 @@ public class Scr_Player_Input : MonoBehaviour
             gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time*4.5f) + 0.2f); //Makes tongue button pulse
         if(Input.GetButtonDown("Tongue"))
         {
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().TongueLaunchSFX();
             FireTongue?.Invoke();
         }
         if (Input.GetButtonUp("Tongue"))
         {
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().TongueRetractSFX();
             RetractTongue?.Invoke();
         }
     }
