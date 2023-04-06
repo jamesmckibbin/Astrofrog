@@ -22,6 +22,8 @@ public class Scr_Fly_Base : MonoBehaviour
 
             if (tag == "Poisonous")
             {GameObject.Find("Frog").GetComponent<Scr_Frog_Hurt>().Pain();}
+
+            GameObject.Find("Fly_Counter").GetComponent<Scr_Fly_Counter>().CounterUpdate();
         }
     }
 
