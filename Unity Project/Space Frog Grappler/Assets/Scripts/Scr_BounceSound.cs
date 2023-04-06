@@ -10,9 +10,7 @@ public class Scr_BounceSound : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Tongue")) //If the player hits the object, it plays a bonk sound effect.
         {
             if (GameObject.Find("Frog").GetComponent<Rigidbody2D>().velocity.magnitude > 0.05)
-            {
-                GameObject.Find("AudioManager").GetComponent<AudioManager>().BonkSFX();
-            }
+            {GameObject.Find("AudioManager").GetComponent<AudioManager>().BonkSFX();}
         }
     }
 }

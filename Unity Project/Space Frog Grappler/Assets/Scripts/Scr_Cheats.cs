@@ -15,24 +15,18 @@ public class Scr_Cheats : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
+        {}
 
-        }
         if (Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            OxygenMeter.SetMaxOxygen(10);
-        }
+        {OxygenMeter.SetMaxOxygen(10);}
+
         else if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            OxygenMeter.SetMaxOxygen(9999);
-        }
+        {OxygenMeter.SetMaxOxygen(9999);}
+        
         else if (Input.GetKeyDown(KeyCode.Keypad4))
-        {
-            OxygenMeter.AddOxygen(5);
-        }
+        {OxygenMeter.AddOxygen(5);}
+
         else if (Input.GetKeyDown(KeyCode.Keypad5))
-        {
-            OxygenMeter.RemoveOxygen(5);
-        }
+        {OxygenMeter.RemoveOxygen(5);}
     }
 }

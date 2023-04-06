@@ -28,6 +28,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
             tongueLR.SetPositions(positions);
             UnparentedMove();
         }
+        
         else
         {
             Vector3[] positions = new Vector3[2] { new Vector3(0, 0, 0), new Vector3(0, 0, 0) };
@@ -44,6 +45,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
             if (frog.GetComponent<Rigidbody2D>().velocity.magnitude < velClamp)
                 frog.GetComponent<Rigidbody2D>().AddForce(new Vector2(baseForce.x * distScale, baseForce.y * 2));
         }
+
         if (transform.parent != null)
         {
             transform.localPosition = new Vector3(0, 0);
@@ -61,14 +63,12 @@ public class Scr_Tongue_Grappling : MonoBehaviour
                 attached = true;
                 outgoing = false;
             }
+
             else if (System.Array.IndexOf(tonguePassThroughTags, collision.gameObject.tag) != -1)
-            {
-                //do nothing, let the tongue pass through
-            }
+            {/*do nothing, let the tongue pass through*/}
+
             else
-            {
-                outgoing = false;
-            }
+            {outgoing = false;}
         }
     }
     
@@ -78,19 +78,17 @@ public class Scr_Tongue_Grappling : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPos, shootSpeed * Time.deltaTime);
             if (Vector3.Distance(targetPos, transform.position) <= 0.1) //If tongue has reached max range, start retracting.
-            {
-                Retract();
-            }
+            {Retract();}
         }
+
         else if (!attached) //If not flying out and not connected to target, retract at _retractSpeed. 
         {
             transform.position = Vector3.MoveTowards(transform.position, frog.transform.position, retractSpeed * Time.deltaTime);
             if (Vector3.Distance(transform.position, frog.transform.position) <= 0.1) //If close enough to frog, reattach to frog.
-            {
-                Reattach();
-            }
+            {Reattach();}
         }
     }
+
     public void Reattach()
     {
         flying = false;

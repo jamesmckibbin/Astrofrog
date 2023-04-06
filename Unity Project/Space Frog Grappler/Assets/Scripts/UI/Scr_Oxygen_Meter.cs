@@ -27,13 +27,11 @@ public class Scr_Oxygen_Meter : MonoBehaviour
     void Update()
     {
         if (CurrentOxygen < maxOxygenValue * 0.33)
-        {
-            OxygenMeterBar.GetComponent<Image>().color = lowHealthColor;
-        }
+        {OxygenMeterBar.GetComponent<Image>().color = lowHealthColor;}
+
         else
-        {
-            OxygenMeterBar.GetComponent<Image>().color = normalHealthColor;
-        }
+        {OxygenMeterBar.GetComponent<Image>().color = normalHealthColor;}
+
         oxygenMeter.maxValue = maxOxygenValue;
         CurrentOxygen = maxOxygenValue + totalOxygenAdded - totalOxygenRemoved - Time.timeSinceLevelLoad;
         oxygenMeter.value = CurrentOxygen;
@@ -41,19 +39,13 @@ public class Scr_Oxygen_Meter : MonoBehaviour
 
     // Updates the maximum oxygen
     public void SetMaxOxygen(float newvalue)
-    {
-        maxOxygenValue = newvalue;
-    }
+    {maxOxygenValue = newvalue;}
 
     // Adds oxygen to the bar
     public void AddOxygen(float value)
-    {
-        totalOxygenAdded += value;
-    }
+    {totalOxygenAdded += value;}
 
     // Removes oxygen from the bar
     public void RemoveOxygen(float value)
-    {
-        totalOxygenRemoved += value;
-    }
+    {totalOxygenRemoved += value;}
 }
