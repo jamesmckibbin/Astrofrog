@@ -55,7 +55,8 @@ public class Scr_Tongue_Grappling : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("I touched a " + collision.gameObject.tag);
+        //Debug.Log("I touched a " + collision.gameObject.tag);
+
         if (outgoing)//Don't attach to anything if it's retracting or just waiting to be fired.
         {
             if (collision.gameObject.CompareTag("Tongueable")) //If the tongue hits a target, mark it as attached to something and not outgoing, attach the hook to the center of the targt, and reset the player's jumps.
@@ -99,7 +100,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
     {
         GameObject.Find("AudioManager").GetComponent<AudioManager>().TongueLaunchSFX();
 
-        Debug.Log("pew");
+        //Debug.Log("pew");
         flying = true;
         outgoing = true;
         transform.SetParent(null, true); //unparents the tongue end from the frog

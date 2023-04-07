@@ -9,7 +9,7 @@ public class Scr_Inverse_Puffer_Fly : MonoBehaviour
     [SerializeField] SpriteRenderer flyRender;
     [SerializeField] Color poisonGreen;
 
-    //Assigning our the frog we're playing as to the script.
+    //Assigning our frog to the script.
     void Start()
     {frog = GameObject.Find("Frog");}
 
@@ -30,6 +30,7 @@ public class Scr_Inverse_Puffer_Fly : MonoBehaviour
             flyRender.material.color = Color.black;
             transform.localScale = new Vector3 (0.7f, 0.7f, 0.5f);
         }
+        
         else
         {
             gameObject.tag = "Poisonous";

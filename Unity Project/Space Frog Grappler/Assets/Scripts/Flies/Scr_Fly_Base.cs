@@ -7,7 +7,6 @@ public class Scr_Fly_Base : MonoBehaviour
     public bool grabbed = false;
     private Transform tongue;
 
-    //In order to not 
     void OnTriggerEnter2D(Collider2D col)
     {
         //Attaches the fly to the tongue if the other collider in question belongs to the tongue
@@ -26,7 +25,7 @@ public class Scr_Fly_Base : MonoBehaviour
             if (tag == "Poisonous")
             {GameObject.Find("Frog").GetComponent<Scr_Frog_Hurt>().Pain();}
 
-            GameObject.Find("Fly_Counter").GetComponent<Scr_Fly_Counter>().CounterUpdate();
+            GameObject.Find("Text_Fly_Counter").GetComponent<Scr_Fly_Counter>().CounterUpdate();
         }
     }
 
