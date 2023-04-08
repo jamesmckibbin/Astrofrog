@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Scr_Oxygen_Meter : MonoBehaviour
 {
     public float CurrentOxygen;
+    public float MaxOxygenValue;
     public GameObject OxygenMeterBar;
 
     private Slider oxygenMeter;
-    private float maxOxygenValue = 120;
     private float totalOxygenAdded;
     private float totalOxygenRemoved;
 
@@ -20,26 +20,26 @@ public class Scr_Oxygen_Meter : MonoBehaviour
     void Start()
     {
         oxygenMeter = GetComponent<Slider>();
-        CurrentOxygen = maxOxygenValue;
+        CurrentOxygen = MaxOxygenValue;
     }
 
     // Adjusts the oxygen meter and sets the bar on the UI
     void Update()
     {
-        if (CurrentOxygen < maxOxygenValue * 0.33)
+        if (CurrentOxygen < MaxOxygenValue * 0.33)
         {OxygenMeterBar.GetComponent<Image>().color = lowHealthColor;}
 
         else
         {OxygenMeterBar.GetComponent<Image>().color = normalHealthColor;}
 
-        oxygenMeter.maxValue = maxOxygenValue;
-        CurrentOxygen = maxOxygenValue + totalOxygenAdded - totalOxygenRemoved - Time.timeSinceLevelLoad;
+        oxygenMeter.maxValue = MaxOxygenValue;
+        CurrentOxygen = MaxOxygenValue + totalOxygenAdded - totalOxygenRemoved - Time.timeSinceLevelLoad;
         oxygenMeter.value = CurrentOxygen;
     }
 
     // Updates the maximum oxygen
     public void SetMaxOxygen(float newvalue)
-    {maxOxygenValue = newvalue;}
+    {MaxOxygenValue = newvalue;}
 
     // Adds oxygen to the bar
     public void AddOxygen(float value)
