@@ -17,7 +17,7 @@ public class Scr_Puffer_Fly : MonoBehaviour
     //Making sure the fly isn't grabbed first is important to make sure puffed-up flies will hurt if grabbed 
     void Update()
     {
-        if (GetComponent<Scr_Fly_Base>().grabbed == false && GameObject.Find("Frog") != null)
+        if (GetComponent<Scr_Edible_Base>().grabbed == false && GameObject.Find("Frog") != null)
         {DistanceCheck();}
     }
 

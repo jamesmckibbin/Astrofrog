@@ -94,8 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7986081224719802938}
   - component: {fileID: 7986081224719802939}
-  - component: {fileID: 7986081224719802917}
   - component: {fileID: 7986081224719802919}
+  - component: {fileID: 7986081224719802917}
+  - component: {fileID: 7771065594536344538}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Fly
@@ -171,19 +172,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7986081224719802917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7986081224719802936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ba2313444a8004baaceb731e8b7458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabbed: 0
 --- !u!58 &7986081224719802919
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -200,3 +188,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7986081224719802917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986081224719802936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ba2313444a8004baaceb731e8b7458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbed: 0
+--- !u!114 &7771065594536344538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986081224719802936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9cacebe9f222446a1feec0f41879cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
