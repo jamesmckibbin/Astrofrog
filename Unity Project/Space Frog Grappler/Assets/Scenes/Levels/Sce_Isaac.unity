@@ -6098,6 +6098,10 @@ PrefabInstance:
       propertyPath: OxygenMeter
       value: 
       objectReference: {fileID: 1646231741}
+    - target: {fileID: 6009343302610081998, guid: 0e96d9b39c7cd6642a3d45d70dbe8028, type: 3}
+      propertyPath: sceneIndexes
+      value: 
+      objectReference: {fileID: 11400000, guid: bdde0d7e252100545a5bbd6583ef25b0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e96d9b39c7cd6642a3d45d70dbe8028, type: 3}
 --- !u!1001 &1385727096
@@ -9394,6 +9398,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1872477949694520904, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -81.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872477949694520904, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 1874818004015465495, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
       propertyPath: m_Name
       value: Frog

@@ -11,11 +11,18 @@ public class Scr_Cheats : MonoBehaviour
     // Feel free to add your own variables and cheats!
 
     public Scr_Oxygen_Meter OxygenMeter;
+    public SceneInfo sceneIndexes;
+    private Scr_Scene_Switcher sceneSwitcher;
+
+    private void Start()
+    {
+        sceneSwitcher = FindObjectOfType<Scr_Scene_Switcher>();
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {}
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {sceneSwitcher.LoadScene(sceneIndexes.TitleScreen);}
 
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {OxygenMeter.SetMaxOxygen(10);}
