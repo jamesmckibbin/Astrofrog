@@ -17,7 +17,7 @@ public class Scr_Inverse_Puffer_Fly : MonoBehaviour
     //Making sure the fly isn't grabbed first is important to make sure puffed-up flies will hurt if grabbed 
     void Update()
     {
-        if (GetComponent<Scr_Fly_Base>().grabbed == false && GameObject.Find("Frog") != null)
+        if (GetComponent<Scr_Edible_Base>().grabbed == false && GameObject.Find("Frog") != null)
         {DistanceCheck();}
     }
 
@@ -26,14 +26,14 @@ public class Scr_Inverse_Puffer_Fly : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, frog.transform.position) <= 5.0f)
         {
-            gameObject.tag = "Fly";
+            gameObject.tag = "FlyEdible";
             flyRender.material.color = Color.black;
             transform.localScale = new Vector3 (0.7f, 0.7f, 0.5f);
         }
         
         else
         {
-            gameObject.tag = "Poisonous";
+            gameObject.tag = "FlyPoisonous";
             flyRender.material.color = poisonGreen;
             transform.localScale = new Vector3 (1.0f, 1.0f, 0.5f);
         }
