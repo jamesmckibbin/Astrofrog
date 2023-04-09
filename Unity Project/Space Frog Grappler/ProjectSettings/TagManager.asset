@@ -6,11 +6,15 @@ TagManager:
   tags:
   - Tongueable
   - Fly
-  - Harmful
   - Tongue
-  - Poisonous
   - MainMenuMusic
   - Level1Music
+  - Edible
+  - Poisonous
+  - Spiky
+  - FlyEdible
+  - FlyPoisonous
+  - FlySpiky
   layers:
   - Default
   - TransparentFX

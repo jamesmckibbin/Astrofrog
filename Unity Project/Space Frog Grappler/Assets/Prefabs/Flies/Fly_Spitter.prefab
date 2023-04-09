@@ -97,8 +97,9 @@ GameObject:
   - component: {fileID: 7986081224719802919}
   - component: {fileID: 7986081224719802917}
   - component: {fileID: 7771065594536344538}
+  - component: {fileID: 8287483091571735955}
   m_Layer: 0
-  m_Name: Fly
+  m_Name: Fly_Spitter
   m_TagString: FlyEdible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +163,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.23854208, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -213,3 +214,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9cacebe9f222446a1feec0f41879cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8287483091571735955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986081224719802936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3643ad127fb365041bbda661cbe5bcba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 907464656367123796, guid: 7c1ebc31f6f911742b64267f8625e1e4, type: 3}
+  spitDirection: 0
+  foreswing: 0.5
+  backswing: 2

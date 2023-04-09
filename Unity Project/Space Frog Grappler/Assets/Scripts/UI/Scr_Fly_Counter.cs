@@ -12,7 +12,9 @@ public class Scr_Fly_Counter : MonoBehaviour
     void Start()
     {
         //Locates every fly in the level, assigns it to the fly total.
-        flyTotal = GameObject.FindGameObjectsWithTag("Fly").Length + GameObject.FindGameObjectsWithTag("Poisonous").Length;
+        flyTotal = GameObject.FindGameObjectsWithTag("FlyEdible").Length
+        + GameObject.FindGameObjectsWithTag("FlyPoisonous").Length
+        + GameObject.FindGameObjectsWithTag("FlySpiky").Length;
 
         fliesEaten = 0;
 

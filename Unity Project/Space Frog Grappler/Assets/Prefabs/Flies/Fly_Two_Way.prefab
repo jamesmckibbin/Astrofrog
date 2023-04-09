@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 7930784396215214555}
   m_Layer: 0
   m_Name: Fly_Two_Way
-  m_TagString: Fly
+  m_TagString: FlyEdible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

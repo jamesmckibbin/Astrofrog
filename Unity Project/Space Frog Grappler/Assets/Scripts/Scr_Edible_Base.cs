@@ -23,7 +23,7 @@ public class Scr_Edible_Base : MonoBehaviour
 
             Destroy(this.gameObject);
 
-            if (tag == "Poisonous")
+            if (tag == "Poisonous" || tag == "FlyPoisonous")
             {GameObject.Find("Frog").GetComponent<Scr_Frog_Hurt>().Pain();}
         }
     }

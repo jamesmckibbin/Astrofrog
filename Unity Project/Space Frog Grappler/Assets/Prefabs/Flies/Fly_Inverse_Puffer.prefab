@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7361201686425366598}
   m_Layer: 0
   m_Name: Fly_Inverse_Puffer
-  m_TagString: Poisonous
+  m_TagString: FlyPoisonous
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

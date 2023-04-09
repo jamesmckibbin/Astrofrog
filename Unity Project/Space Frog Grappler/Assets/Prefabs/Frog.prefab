@@ -129,8 +129,12 @@ MonoBehaviour:
   frog: {fileID: 1872477949694520904}
   tonguePassThroughTags:
   - Player
-  - Fly
+  - Edible
   - Poisonous
+  - Spiky
+  - FlyEdible
+  - FlyPoisonous
+  - FlySpiky
   shootSpeed: 25
   retractSpeed: 100
   maxRange: 15
