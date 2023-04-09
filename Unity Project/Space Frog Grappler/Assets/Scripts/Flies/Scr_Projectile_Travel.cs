@@ -11,7 +11,7 @@ public class Scr_Projectile_Travel : MonoBehaviour
     //The projectile will dissipate when it hits a wall.
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Tongueable")
+        if (col.gameObject.CompareTag("Tongueable"))
         {Destroy(this.gameObject);}
     }
 }

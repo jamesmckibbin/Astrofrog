@@ -26,7 +26,7 @@ public class Scr_Two_Way_Fly : MonoBehaviour
     //When this fly hits a wall, it'll change directions.
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Tongueable")
+        if (col.gameObject.CompareTag("Tongueable"))
         {
             translatedX *= -1;
             translatedY *= -1;

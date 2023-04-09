@@ -107,7 +107,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
         targetPos = transform.position + (maxRange * transform.up); //sets target position to a distance ahead of the curent facing position.
     }
 
-    private void Retract()
+    public void Retract()
     {
         GameObject.Find("AudioManager").GetComponent<AudioManager>().TongueRetractSFX();
 
