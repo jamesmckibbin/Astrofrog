@@ -26,7 +26,7 @@ public class Scr_Spit_Projectile : MonoBehaviour
     {
         yield return new WaitForSeconds(foreswing);
 
-        Instantiate(projectile, transform.position, new Quaternion (0.0f, 0.0f, spitDirection * Mathf.Deg2Rad, 1.0f));
+        Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, spitDirection));
 
         yield return new WaitForSeconds(backswing);
         canSpit = true;
