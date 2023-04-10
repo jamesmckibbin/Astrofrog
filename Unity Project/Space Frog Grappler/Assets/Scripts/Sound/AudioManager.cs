@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip TongueRetract;
     public AudioClip Bonk;
 
+    public float randomChoice = 0;
 
     //Creates an audiomanager instance and and audiosurce
     private AudioSource source;
@@ -30,6 +31,8 @@ public class AudioManager : MonoBehaviour
             Destroy(this);
             return;
         }
+
+        randomChoice = UnityEngine.Random.Range(0, 2);
     }
 
     public void Start()
@@ -66,7 +69,12 @@ public class AudioManager : MonoBehaviour
                 {
                     instance.source.Stop();
                     instance.source.clip = instance.TongueLaunch;
+                    source.pitch = randomChoice;
                     instance.source.Play();
+
+                    source.pitch = 0;
+
+                    randomChoice = UnityEngine.Random.Range(0, 2);
                 }
             }
         }
@@ -98,7 +106,12 @@ public class AudioManager : MonoBehaviour
                 {
                     instance.source.Stop();
                     instance.source.clip = instance.TongueRetract;
+                    source.pitch = randomChoice;
                     instance.source.Play();
+
+                    source.pitch = 0;
+
+                    randomChoice = UnityEngine.Random.Range(0, 2);
                 }
             }
         }
