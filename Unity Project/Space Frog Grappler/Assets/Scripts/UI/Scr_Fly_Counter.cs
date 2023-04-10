@@ -7,7 +7,7 @@ public class Scr_Fly_Counter : MonoBehaviour
 {
     public int fliesEaten, flyTotal;
 
-    public TMP_Text flyText;
+    public TextMeshProUGUI flyText;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class Scr_Fly_Counter : MonoBehaviour
         fliesEaten = 0;
 
         //Concatenates the numbers into the text that will be shown on the UI.
-        flyText.text = fliesEaten.ToString() + " / " + flyTotal.ToString();
+        flyText.text = "Flies Left: " + fliesEaten.ToString() + " / " + flyTotal.ToString();
     }
 
     public void CounterUpdate()
@@ -27,6 +27,6 @@ public class Scr_Fly_Counter : MonoBehaviour
         fliesEaten++;
 
         //Concatenates the numbers again.
-        flyText.text = fliesEaten.ToString() + " / " + flyTotal.ToString();
+        flyText.text = "Flies Left: " + fliesEaten.ToString() + " / " + flyTotal.ToString();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class Scr_Oxygen_Meter : MonoBehaviour
     public float CurrentOxygen;
     public float MaxOxygenValue;
     public GameObject OxygenMeterBar;
+    public TextMeshProUGUI text;
 
     private Slider oxygenMeter;
     private float totalOxygenAdded;
@@ -21,6 +23,7 @@ public class Scr_Oxygen_Meter : MonoBehaviour
     {
         oxygenMeter = GetComponent<Slider>();
         CurrentOxygen = MaxOxygenValue;
+        text.text = MaxOxygenValue.ToString();
     }
 
     // Adjusts the oxygen meter and sets the bar on the UI
@@ -35,6 +38,7 @@ public class Scr_Oxygen_Meter : MonoBehaviour
         oxygenMeter.maxValue = MaxOxygenValue;
         CurrentOxygen = MaxOxygenValue + totalOxygenAdded - totalOxygenRemoved - Time.timeSinceLevelLoad;
         oxygenMeter.value = CurrentOxygen;
+        text.text = Mathf.Round(CurrentOxygen).ToString();
     }
 
     // Updates the maximum oxygen
