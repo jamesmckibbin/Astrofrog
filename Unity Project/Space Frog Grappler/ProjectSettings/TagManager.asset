@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tongueable
+  - Fly
+  - Tongue
+  - MainMenuMusic
+  - Level1Music
+  - Edible
+  - Poisonous
+  - Spiky
+  - FlyEdible
+  - FlyPoisonous
+  - FlySpiky
   layers:
   - Default
   - TransparentFX
