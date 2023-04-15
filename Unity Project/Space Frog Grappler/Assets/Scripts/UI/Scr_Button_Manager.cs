@@ -17,6 +17,11 @@ public class Scr_Button_Manager : MonoBehaviour
         StartCoroutine(sceneSwitcher.LoadScene(sceneIndexes.TitleScreen));
     }
 
+    public void GoToLevels()
+    {
+        StartCoroutine(sceneSwitcher.LoadScene(sceneIndexes.LevelSelect));
+    }
+
     public void GoToCredits()
     {
         StartCoroutine(sceneSwitcher.LoadScene(sceneIndexes.Credits));
