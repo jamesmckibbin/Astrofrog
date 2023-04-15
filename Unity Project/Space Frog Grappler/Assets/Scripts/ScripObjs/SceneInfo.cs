@@ -10,9 +10,10 @@ public class SceneInfo : ScriptableObject
 
     public int TitleScreen;
     public int Credits;
+    public int SelectLevel;
+    public int GameOver;
+    public int EndScreen;
     public int Level_1;
     public int Level_2;
     public int Level_3;
-    public int GameOver;
-    public int EndScreen;
 }

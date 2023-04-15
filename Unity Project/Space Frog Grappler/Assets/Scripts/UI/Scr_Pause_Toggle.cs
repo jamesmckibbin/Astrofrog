@@ -10,18 +10,21 @@ public class Scr_Pause_Toggle : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (pauseMenu.activeSelf == false)
-            {
-                Time.timeScale = 0.0f;
-                pauseMenu.SetActive(true);
-            }
+        {Toggle();}
+    }
 
-            else
-            {
-                Time.timeScale = 1.0f;
-                pauseMenu.SetActive(false);
-            }
+    public void Toggle()
+    {
+        if (pauseMenu.activeSelf == false)
+        {
+            Time.timeScale = 0.0f;
+            pauseMenu.SetActive(true);
+        }
+
+        else
+        {
+            Time.timeScale = 1.0f;
+            pauseMenu.SetActive(false);
         }
     }
 }

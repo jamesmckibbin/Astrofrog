@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/Sce_Title.unity
     guid: 42c0013fe1b5b7f47a7053458bad0bf3
   - enabled: 1
+    path: Assets/Scenes/UI/Sce_Credits.unity
+    guid: 36263891a8fcc1d468ab8fe8f7ede0be
+  - enabled: 1
+    path: Assets/Scenes/UI/Sce_Select_Level.unity
+    guid: 95b4fb8a4a8519b41a90b9d8e85c63e3
+  - enabled: 1
     path: Assets/Scenes/Levels/Sce_Isaac.unity
     guid: 7c67f4ac95ad78d44b65b27ace5498cd
   m_configObjects: {}
