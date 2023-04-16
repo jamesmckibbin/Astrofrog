@@ -36,7 +36,7 @@ public class Scr_Title_Wheel : MonoBehaviour
             else if (transform.localRotation.eulerAngles.z > 90 && transform.localRotation.eulerAngles.z < 180)
             {
                 print("levels");
-                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.LevelSelect));
+                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.SelectLevel));
             }
             // Credits
             else if (transform.localRotation.eulerAngles.z > 0 && transform.localRotation.eulerAngles.z < 90)
