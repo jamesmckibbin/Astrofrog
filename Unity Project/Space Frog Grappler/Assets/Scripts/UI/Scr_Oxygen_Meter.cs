@@ -29,7 +29,10 @@ public class Scr_Oxygen_Meter : MonoBehaviour
     // Adjusts the oxygen meter and sets the bar on the UI
     void Update()
     {
-        if (CurrentOxygen < MaxOxygenValue * 0.33)
+        if (CurrentOxygen <= 0)
+        {GameObject.Find("ButtonManager").GetComponent<Scr_Button_Manager>().GoToGameOver();}
+
+        else if (CurrentOxygen < MaxOxygenValue * 0.33)
         {OxygenMeterBar.GetComponent<Image>().color = lowHealthColor;}
 
         else

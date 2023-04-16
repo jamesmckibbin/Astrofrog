@@ -8,16 +8,11 @@ public class Scr_Scene_Switcher : MonoBehaviour
     private static Scr_Scene_Switcher instance;
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-
         if (instance == null)
-        {
-            instance = this;
-        }
+        {instance = this;}
+
         else
-        {
-            Object.Destroy(this.gameObject);
-        }
+        {Object.Destroy(this.gameObject);}
     }
 
     public IEnumerator LoadScene(int levelIndex)
