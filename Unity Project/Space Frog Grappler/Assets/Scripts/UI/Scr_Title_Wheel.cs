@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Scr_Title_Wheel : MonoBehaviour
 {
+    public Scr_Scene_Switcher SceneSwitcher;
+    public SceneInfo SceneIndexes;
+
     [SerializeField] private float turntableMod = 875000;
     [SerializeField] private float keyboardMod = 250;
     Gamepad gamepad = Gamepad.current;
@@ -13,6 +16,35 @@ public class Scr_Title_Wheel : MonoBehaviour
     {
         if (gamepad != null)
             gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time * 4.5f) + 0.2f); //Makes tongue button pulse
+
+        if (Input.GetButtonDown("Tongue"))
+        {
+            print(transform.localEulerAngles.z);
+            // Start
+            if (transform.localRotation.eulerAngles.z > 270 && transform.localRotation.eulerAngles.z < 360)
+            {
+                print("start");
+                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Level_1));
+            }
+            // Exit
+            else if (transform.localRotation.eulerAngles.z > 180 && transform.localRotation.eulerAngles.z < 270)
+            {
+                print("quit");
+                Application.Quit();
+            }
+            // Levels
+            else if (transform.localRotation.eulerAngles.z > 90 && transform.localRotation.eulerAngles.z < 180)
+            {
+                print("levels");
+                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.LevelSelect));
+            }
+            // Credits
+            else if (transform.localRotation.eulerAngles.z > 0 && transform.localRotation.eulerAngles.z < 90)
+            {
+                print("credits");
+                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Credits));
+            }
+        }
     }
 
     private void FixedUpdate()

@@ -304,6 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a075aad0561e85d41bad2f6d2ac42571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneSwitcher: {fileID: 1632270334}
+  SceneIndexes: {fileID: 11400000, guid: bdde0d7e252100545a5bbd6583ef25b0, type: 2}
   turntableMod: 875000
   keyboardMod: 250
 --- !u!1 &266402033
@@ -1206,6 +1208,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc0d21a3553c09c48a86ee2fbf42cd7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1632270334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7095658121011973716, guid: 81ee91d79e1845f42ad7df7ffd9e51e7, type: 3}
+  m_PrefabInstance: {fileID: 1647287153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c9d4c5593283c44b6b10241fc88734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1647287153
