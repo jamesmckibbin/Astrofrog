@@ -31,7 +31,7 @@ public class Scr_Button_Manager : MonoBehaviour
     public void GoToLevel2()
     {StartCoroutine(sceneSwitcher.LoadScene(sceneIndexes.Level_2));}
 
-        public void GoToLevel3()
+    public void GoToLevel3()
     {StartCoroutine(sceneSwitcher.LoadScene(sceneIndexes.Level_3));}
 
     public void ExitGame()

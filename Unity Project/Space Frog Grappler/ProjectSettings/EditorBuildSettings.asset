@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/Sce_Select_Level.unity
     guid: 95b4fb8a4a8519b41a90b9d8e85c63e3
   - enabled: 1
-    path: Assets/Scenes/Levels/Sce_Isaac.unity
+    path: Assets/Scenes/UI/Sce_Game_Over.unity
+    guid: 7539cb9ed9b29444d8670ee50b5f8845
+  - enabled: 1
+    path: Assets/Scenes/UI/Sce_Complete_Level.unity
+    guid: f603e2b053f148a468be967ae010311e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Sce_Level_1.unity
     guid: 7c67f4ac95ad78d44b65b27ace5498cd
   m_configObjects: {}

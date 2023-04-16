@@ -836,9 +836,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3226514845634368941, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
-        m_TargetAssemblyTypeName: Scr_Button_Manager, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 8760059266448165208}
+        m_TargetAssemblyTypeName: Scr_Pause_Options, Assembly-CSharp
+        m_MethodName: PauseQuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1184,9 +1184,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3226514845634368941, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
-        m_TargetAssemblyTypeName: Scr_Button_Manager, Assembly-CSharp
-        m_MethodName: GoToSelectLevel
+      - m_Target: {fileID: 8760059266448165208}
+        m_TargetAssemblyTypeName: Scr_Pause_Options, Assembly-CSharp
+        m_MethodName: PauseExitLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1231,6 +1231,7 @@ RectTransform:
   - {fileID: 6329401562123354684}
   - {fileID: 3432710639788451346}
   - {fileID: 5773807261932747585}
+  - {fileID: 3171781903748408831}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1311,7 +1312,7 @@ GameObject:
   - component: {fileID: 6188538125129517536}
   - component: {fileID: 6188538125129517537}
   - component: {fileID: 6188538125129517470}
-  - component: {fileID: 6128533255230747437}
+  - component: {fileID: 8760059266448165208}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1369,7 +1370,7 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &6128533255230747437
+--- !u!114 &8760059266448165208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1936,9 +1937,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6128533255230747437}
-        m_TargetAssemblyTypeName: Scr_Pause_Toggle, Assembly-CSharp
-        m_MethodName: Toggle
+      - m_Target: {fileID: 8760059266448165208}
+        m_TargetAssemblyTypeName: Scr_Pause_Options, Assembly-CSharp
+        m_MethodName: PauseToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1948,3 +1949,65 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &54761169799360595
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6188538123253819628}
+    m_Modifications:
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226514845634368943, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+      propertyPath: m_Name
+      value: ButtonManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+--- !u!4 &3171781903748408831 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3226514845634368940, guid: 53b49a2cf268b1d4ea966bc382f61b58, type: 3}
+  m_PrefabInstance: {fileID: 54761169799360595}
+  m_PrefabAsset: {fileID: 0}
