@@ -10,6 +10,9 @@ public class Scr_Player_Input : MonoBehaviour
     [SerializeField] private float keyboardMod = 250;
     public static event Action FireTongue;
     public static event Action RetractTongue;
+
+    public bool WaitForTongue = false;
+
     Gamepad gamepad = Gamepad.current;
 
     // Update is called once per frame
@@ -19,7 +22,13 @@ public class Scr_Player_Input : MonoBehaviour
             gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time*4.5f) + 0.2f); //Makes tongue button pulse
 
         if(Input.GetButtonDown("Tongue"))
-        {FireTongue?.Invoke();}
+        {
+            if (!WaitForTongue)
+            {
+                FireTongue?.Invoke();
+                WaitForTongue = true;
+            }
+        }
 
         if (Input.GetButtonUp("Tongue"))
         {RetractTongue?.Invoke();}

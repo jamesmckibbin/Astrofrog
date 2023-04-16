@@ -7,7 +7,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
     private bool flying = false, outgoing = false, attached = false;
     private Vector3 targetPos, startingPos, attachPoint;
 
-    [SerializeField] private Transform frog;
+    [SerializeField] private GameObject frog;
     [SerializeField] private string[] tonguePassThroughTags; //list of object tags that the tongue will not attach to or bounce off of
     [SerializeField] private float shootSpeed, retractSpeed, maxRange, tongueRange, tongueStrength, velClamp;
     [SerializeField] private LineRenderer tongueLR;
@@ -24,7 +24,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
     {
         if (flying)
         {
-            Vector3[] positions = new Vector3[2] { frog.position, transform.position };
+            Vector3[] positions = new Vector3[2] { frog.transform.position, transform.position };
             tongueLR.SetPositions(positions);
             UnparentedMove();
         }
@@ -42,8 +42,7 @@ public class Scr_Tongue_Grappling : MonoBehaviour
         {
             Vector3 baseForce = Vector3.Normalize(transform.position - frog.transform.position) * tongueStrength;
             float distScale = Mathf.Clamp((Vector2.Distance(transform.position, frog.transform.position) - tongueRange), 0, velClamp);
-            if (frog.GetComponent<Rigidbody2D>().velocity.magnitude < velClamp)
-                frog.GetComponent<Rigidbody2D>().AddForce(new Vector2(baseForce.x, baseForce.y));
+            frog.GetComponent<Rigidbody2D>().AddForce(new Vector2(baseForce.x, baseForce.y));
         }
 
         if (transform.parent != null)
@@ -100,7 +99,8 @@ public class Scr_Tongue_Grappling : MonoBehaviour
     public void Reattach()
     {
         flying = false;
-        transform.SetParent(frog, true);
+        transform.SetParent(frog.transform, true);
+        frog.GetComponent<Scr_Player_Input>().WaitForTongue = false;
     }
 
     private void Shoot()
