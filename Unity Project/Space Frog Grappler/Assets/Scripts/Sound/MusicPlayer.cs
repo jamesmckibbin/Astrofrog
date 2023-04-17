@@ -11,6 +11,7 @@ public class MusicPlayer : MonoBehaviour
     //These clips each hold one sound effect that can be called via a function.
     public AudioClip mainMenuMusic;
     public AudioClip level1Music;
+    public AudioClip selectMusic;
 
     //Creates an audiomanager instance and and audiosurce
     private static MusicPlayer instance;
@@ -54,6 +55,15 @@ public class MusicPlayer : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.level1Music;
+                instance.source.Play();
+            }
+        }
+        else if (GameObject.FindWithTag("SelectMusic"))
+        {
+            if (source.clip != level1Music)
+            {
+                instance.source.Stop();
+                instance.source.clip = instance.selectMusic;
                 instance.source.Play();
             }
         }
