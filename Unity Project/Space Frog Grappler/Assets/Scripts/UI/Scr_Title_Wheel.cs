@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static System.Net.Mime.MediaTypeNames;
 
 public class Scr_Title_Wheel : MonoBehaviour
 {
@@ -25,24 +26,28 @@ public class Scr_Title_Wheel : MonoBehaviour
             {
                 print("start");
                 StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Level_1));
+                GameObject.Find("AudioManager").GetComponent<AudioManager>().ClickSFX();
             }
             // Exit
             else if (transform.localRotation.eulerAngles.z > 180 && transform.localRotation.eulerAngles.z < 270)
             {
                 print("quit");
-                Application.Quit();
+                //Application.Quit();
+                GameObject.Find("AudioManager").GetComponent<AudioManager>().ClickSFX();
             }
             // Levels
             else if (transform.localRotation.eulerAngles.z > 90 && transform.localRotation.eulerAngles.z < 180)
             {
                 print("levels");
                 StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.SelectLevel));
+                GameObject.Find("AudioManager").GetComponent<AudioManager>().ClickSFX();
             }
             // Credits
             else if (transform.localRotation.eulerAngles.z > 0 && transform.localRotation.eulerAngles.z < 90)
             {
                 print("credits");
                 StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Credits));
+                GameObject.Find("AudioManager").GetComponent<AudioManager>().ClickSFX();
             }
         }
     }

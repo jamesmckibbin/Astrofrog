@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip TongueHit;
     public AudioClip TongueRetract;
     public AudioClip Bonk;
+    public AudioClip menuHover;
+    public AudioClip menuClick;
 
     public float randomChoice = 0;
 
@@ -127,6 +129,38 @@ public class AudioManager : MonoBehaviour
                 {
                     instance.source.Stop();
                     instance.source.clip = instance.Bonk;
+                    instance.source.Play();
+                }
+            }
+        }
+    }
+
+    public void HoverSFX()
+    {
+        if (instance != null)
+        {
+            if (instance.source != null)
+            {
+                if (source.clip != menuHover)
+                {
+                    instance.source.Stop();
+                    instance.source.clip = instance.menuHover;
+                    instance.source.Play();
+                }
+            }
+        }
+    }
+
+    public void ClickSFX()
+    {
+        if (instance != null)
+        {
+            if (instance.source != null)
+            {
+                if (source.clip != menuClick)
+                {
+                    instance.source.Stop();
+                    instance.source.clip = instance.menuClick;
                     instance.source.Play();
                 }
             }

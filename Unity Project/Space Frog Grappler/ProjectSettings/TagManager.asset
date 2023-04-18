@@ -15,6 +15,7 @@ TagManager:
   - FlyEdible
   - FlyPoisonous
   - FlySpiky
+  - SelectMusic
   layers:
   - Default
   - TransparentFX

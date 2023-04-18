@@ -33,7 +33,7 @@ Transform:
   - {fileID: 2608365695866405117}
   - {fileID: 2234773834890931110}
   m_Father: {fileID: 7315053414119958739}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4541219378591493634
 SpriteRenderer:
@@ -453,6 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turntableMod: 875000
   keyboardMod: 250
+  WaitForTongue: 0
 --- !u!50 &1872477949694520905
 Rigidbody2D:
   serializedVersion: 4
@@ -868,7 +869,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7315053414119958739}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1858998906836821197
 SpriteRenderer:
@@ -1039,7 +1040,7 @@ Transform:
   - {fileID: 4335367806508303838}
   - {fileID: 6625190183712676922}
   m_Father: {fileID: 7315053414119958739}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5675041347264294493
 SpriteRenderer:
@@ -1290,9 +1291,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3575275379928622304}
+  - {fileID: 9155543884748117187}
   - {fileID: 3077727783838161954}
   - {fileID: 7439927838624787657}
-  - {fileID: 9155543884748117187}
   m_Father: {fileID: 1872477949694520904}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
