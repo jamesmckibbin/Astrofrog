@@ -41,23 +41,17 @@ public class Scr_Stat_Tracking : MonoBehaviour
         if (SceneManager.GetActiveScene().name.Contains("Sce_Level_1"))
         {fliesEaten = GameObject.Find("Text_Fly_Counter").GetComponent<Scr_Fly_Counter>().fliesEaten;}
         
-        print("flies eaten: " + fliesEaten);
-        
         if (SceneManager.GetActiveScene().name == "Sce_Game_Over" || SceneManager.GetActiveScene().name == "Sce_Complete_Level")
         {TallyScores();}
 
         else if (SceneManager.GetActiveScene().name == "Sce_Select_Level")
-        {}
+        {Destroy(this.gameObject);}
     }
 
     //Gives its numbers to the level complete / game over screen.
     //Then it updates ScoreInfo if necessary and destroys itself.
     void TallyScores()
     {
-        print("uh huh, uh huh...");
-
-        print(fliesEaten.ToString() + " / " + flyTotal.ToString() + "flies!");
-
         flyText = GameObject.Find("Text_Final_Score").GetComponent<TextMeshProUGUI>();
             
         flyText.text = fliesEaten.ToString() + " / " + flyTotal.ToString() + " flies!";
@@ -65,7 +59,6 @@ public class Scr_Stat_Tracking : MonoBehaviour
         switch (whatLevel)
         {
             case 1:
-                print("i was on level 1!");
                 scoreIndexes.MaxLevel1 = flyTotal;
 
                 if (fliesEaten > scoreIndexes.BestLevel1)
@@ -87,7 +80,6 @@ public class Scr_Stat_Tracking : MonoBehaviour
                 break;
 
             default:
-                print("this reminds me of a novel by george orwell");
                 break;
         }
 
