@@ -46452,6 +46452,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -25.44
       objectReference: {fileID: 0}
+    - target: {fileID: 1872477949694520950, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
+      propertyPath: turntableMod
+      value: 874999
+      objectReference: {fileID: 0}
     - target: {fileID: 1872477949694520951, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
       propertyPath: m_SortingOrder
       value: 2
