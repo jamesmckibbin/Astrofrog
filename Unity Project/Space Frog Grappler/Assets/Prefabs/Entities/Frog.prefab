@@ -516,8 +516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9109192cb8752e4b982be2fc4bd915b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frogRb: {fileID: 1872477949694520905}
-  packinTime: 0
+  PackinTime: 0
+  frogTform: {fileID: 1872477949694520904}
 --- !u!1 &2749433167665472786
 GameObject:
   m_ObjectHideFlags: 0

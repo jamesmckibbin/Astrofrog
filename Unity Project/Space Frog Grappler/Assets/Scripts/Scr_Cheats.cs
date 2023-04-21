@@ -13,27 +13,37 @@ public class Scr_Cheats : MonoBehaviour
     public Scr_Oxygen_Meter OxygenMeter;
     public SceneInfo sceneIndexes;
     private Scr_Scene_Switcher sceneSwitcher;
+    private Scr_Jetpack_Effect jetpack;
 
     private void Start()
     {
         sceneSwitcher = FindObjectOfType<Scr_Scene_Switcher>();
+        jetpack = FindObjectOfType<Scr_Jetpack_Effect>();
     }
 
     void Update()
     {
+        //Go back to the title screen.
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {sceneSwitcher.LoadScene(sceneIndexes.TitleScreen);}
 
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        //Good for going to the game over screen quickly.
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {OxygenMeter.SetMaxOxygen(10);}
 
-        else if (Input.GetKeyDown(KeyCode.Keypad2))
+        //Nearly unlimited oxygen.
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {OxygenMeter.SetMaxOxygen(9999);}
         
-        else if (Input.GetKeyDown(KeyCode.Keypad4))
+        //Add or remove oxygen.
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {OxygenMeter.AddOxygen(5);}
 
-        else if (Input.GetKeyDown(KeyCode.Keypad5))
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {OxygenMeter.RemoveOxygen(5);}
+
+        //Enables the jetpack. Press again to disable.
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {jetpack.PackinTime = true;}
     }
 }

@@ -10,8 +10,8 @@ public class Scr_Jetpack_Effect : MonoBehaviour
     [SerializeField] Rigidbody2D frogRb;
     private float propulsion;
 
-    public void JetpackStart(float duration)
-    {StartCoroutine(JetpackDuration(duration));}
+    public void JetpackStart(float duration2)
+    {StartCoroutine(JetpackDuration(duration2));}
 
     //Propels the frog forward for as long as the jetpack is active.
     void FixedUpdate()
@@ -28,11 +28,11 @@ public class Scr_Jetpack_Effect : MonoBehaviour
     }
 
     //Stops the jetpack after its duration ends.
-    private IEnumerator JetpackDuration(float duration)
+    private IEnumerator JetpackDuration(float duration3)
     {
         print("called!");
         
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(duration3);
 
         PackinTime = false;
         print("ended!");
