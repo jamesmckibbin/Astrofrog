@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class Scr_Jetpack_Effect : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D frogRb;
-    public bool packinTime = false;
+    public IEnumerator coroutine;
+    public bool PackinTime = false;
 
-    private float forceAmount;
+    [SerializeField] Rigidbody2D frogRb;
+    private float propulsion;
+
+    public void JetpackStart(float duration)
+    {StartCoroutine(JetpackDuration(duration));}
 
     //Propels the frog forward for as long as the jetpack is active.
     void FixedUpdate()
     {
-        if (packinTime)
+        if (PackinTime)
         {
-            print(frogRb.velocity.magnitude);
-            forceAmount = Mathf.Clamp(((8.0f / frogRb.velocity.magnitude) - 1), 0.0f, 8.0f);
-            print(forceAmount);
-            frogRb.AddForce(transform.up * forceAmount, ForceMode2D.Force);
+            frogRb.velocity = transform.up * propulsion;
+            
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+            {propulsion = Mathf.Clamp(propulsion - 0.1f, 0.0f, 8);}
+            else
+            {propulsion = Mathf.Clamp(propulsion + 0.09f, 0.0f, 8);}
         }
     }
 
     //Stops the jetpack after its duration ends.
-    public IEnumerator JetpackDuration(float duration)
+    private IEnumerator JetpackDuration(float duration)
     {
+        print("called!");
+        
         yield return new WaitForSeconds(duration);
-        print("jetpack deactivated!");
-        packinTime = false;
+
+        PackinTime = false;
+        print("ended!");
     }
 }

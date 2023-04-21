@@ -11,9 +11,10 @@ public class Scr_Jetpack_Pickup : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            print("jetpack activated!");
-            col.gameObject.GetComponent<Scr_Jetpack_Effect>().packinTime = true;
-            StartCoroutine(col.gameObject.GetComponent<Scr_Jetpack_Effect>().JetpackDuration(duration));
+            col.gameObject.GetComponent<Scr_Jetpack_Effect>().PackinTime = true;
+
+            StartCoroutine(col.gameObject.GetComponent<Scr_Jetpack_Effect>().JetpackStart(duration));
+            print("started!");
         }
     }
 }
