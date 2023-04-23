@@ -13,7 +13,7 @@ public class TongueGrappling : MonoBehaviour
     [SerializeField] private LineRenderer tongueLR;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         PlayerInput.FireTongue += Shoot;
         PlayerInput.RetractTongue += Retract;
@@ -56,6 +56,12 @@ public class TongueGrappling : MonoBehaviour
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        PlayerInput.FireTongue -= Shoot;
+        PlayerInput.RetractTongue -= Retract;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
