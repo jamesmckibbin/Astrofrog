@@ -28,14 +28,10 @@ public class S_BounceSound : MonoBehaviour
         {
             if (GameObject.Find("Frog").GetComponent<Rigidbody2D>().velocity.magnitude > 0.1)
             {
-<<<<<<< Updated upstream:Unity Project/Space Frog Grappler/Assets/Scripts/Sound/S_BounceSound.cs
                 GameObject.Find("AudioManager").GetComponent<S_AudioManager>().BonkSFX();
-=======
-                GameObject.Find("AudioManager").GetComponent<AudioManager>().BonkSFX();
                 animator.SetBool("HitWall", true);
 
                 StartCoroutine(Wait());
->>>>>>> Stashed changes:Unity Project/Space Frog Grappler/Assets/Scripts/Sound/BounceSound.cs
             }
         }
     }
