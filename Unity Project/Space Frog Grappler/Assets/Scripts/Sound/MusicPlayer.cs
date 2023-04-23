@@ -60,7 +60,7 @@ public class MusicPlayer : MonoBehaviour
         }
         else if (GameObject.FindWithTag("SelectMusic"))
         {
-            if (source.clip != level1Music)
+            if (source.clip != selectMusic)
             {
                 instance.source.Stop();
                 instance.source.clip = instance.selectMusic;
