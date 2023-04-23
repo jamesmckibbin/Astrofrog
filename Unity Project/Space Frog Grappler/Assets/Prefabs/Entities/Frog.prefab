@@ -362,8 +362,8 @@ GameObject:
   - component: {fileID: 1872477949694520950}
   - component: {fileID: 1872477949694520905}
   - component: {fileID: 1872477949694520906}
-  - component: {fileID: 257986300563126412}
-  - component: {fileID: 1413339897491046613}
+  - component: {fileID: 6309345591532754095}
+  - component: {fileID: 3172507380930292659}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Player
@@ -492,7 +492,7 @@ CircleCollider2D:
   m_Offset: {x: 0.000000017370578, y: 0.14571498}
   serializedVersion: 2
   m_Radius: 0.43438175
---- !u!114 &257986300563126412
+--- !u!114 &6309345591532754095
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -501,10 +501,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872477949694520949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4732917c2549d2b4f838c6a7a98a5702, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cd4eb6bd12b69c42bfbd676cd3d0730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1413339897491046613
+--- !u!114 &3172507380930292659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872477949694520949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c33aeaf44179d234c8a1bec99d2f9743, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d548a759dcfc024bb7d6bd73769e3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PackinTime: 0
