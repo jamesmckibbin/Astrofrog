@@ -15,7 +15,6 @@ public class S_JetpackPickup : MonoBehaviour
             col.gameObject.GetComponent<S_JetpackEffect>().PackinTime = true;
 
             col.gameObject.GetComponent<S_JetpackEffect>().JetpackStart(duration1);
-            print("started!");
         }
     }
 }

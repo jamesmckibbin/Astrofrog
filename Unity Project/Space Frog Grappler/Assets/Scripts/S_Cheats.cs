@@ -44,6 +44,9 @@ public class S_Cheats : MonoBehaviour
 
         //Enables the jetpack. Press again to disable.
         else if (Input.GetKeyDown(KeyCode.Alpha5))
-        {jetpack.PackinTime = true;}
+        {
+            jetpack.PackinTime = true;
+            jetpack.nitroJet.Stop();
+        }
     }
 }

@@ -8,6 +8,7 @@ public class S_JetpackEffect : MonoBehaviour
     public bool PackinTime = false;
 
     [SerializeField] Rigidbody2D frogRb;
+    public ParticleSystem nitroJet;
 
     public void JetpackStart(float duration2)
     {StartCoroutine(JetpackDuration(duration2));}
@@ -21,18 +22,22 @@ public class S_JetpackEffect : MonoBehaviour
             float velocityInDirection = Vector3.Dot(frogRb.velocity, transform.up);
 
             if (velocityInDirection < 8.0f)
-            {frogRb.AddForce(transform.up * 5.0f);}
+            {
+                frogRb.AddForce(transform.up * 5.0f);
+                nitroJet.Play();
+            }
+
+            else
+            {nitroJet.Stop();}
         }
     }
 
     //Stops the jetpack after its duration ends.
     private IEnumerator JetpackDuration(float duration3)
-    {
-        print("called!");
-        
+    {  
         yield return new WaitForSeconds(duration3);
 
         PackinTime = false;
-        print("ended!");
+        nitroJet.Stop();
     }
 }

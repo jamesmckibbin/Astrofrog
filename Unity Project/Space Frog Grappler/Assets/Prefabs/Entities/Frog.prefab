@@ -520,6 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PackinTime: 0
   frogRb: {fileID: 1872477949694520905}
+  nitroJet: {fileID: 3039649679466638492}
 --- !u!198 &3039649679466638492
 ParticleSystem:
   m_ObjectHideFlags: 0
