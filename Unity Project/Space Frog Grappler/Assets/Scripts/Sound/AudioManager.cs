@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class AudioManager : MonoBehaviour
     public float randomChoice = 0;
 
     //Creates an audiomanager instance and and audiosurce
-    private AudioSource source;
+    public AudioSource source;
     private static AudioManager instance;
 
     public void Awake()
@@ -34,29 +36,25 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        randomChoice = UnityEngine.Random.Range(0, 2);
+        randomChoice = UnityEngine.Random.Range(0.7f, 1.3f);
     }
 
-    public void Start()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Finds the audiomanager
-        source = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+        source = GameObject.Find("MusicManager").GetComponent<AudioSource>();
     }
 
-    //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
+        //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
 
-    public void ChompSFX()
+        public void ChompSFX()
     {
         if (instance != null)
         {
             if (instance.source != null)
             {
-                if (source.clip != Chomp)
-                {
-                    instance.source.Stop();
-                    instance.source.clip = instance.Chomp;
-                    instance.source.Play();
-                }
+                instance.source.Stop();
+                instance.source.clip = instance.Chomp;
+                instance.source.Play();
             }
         }
     }
@@ -67,17 +65,14 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                if (source.clip != TongueLaunch)
-                {
-                    instance.source.Stop();
-                    instance.source.clip = instance.TongueLaunch;
-                    source.pitch = randomChoice;
-                    instance.source.Play();
+                instance.source.Stop();
+                instance.source.clip = instance.TongueLaunch;
+                source.pitch = randomChoice;
+                instance.source.Play();
 
-                    source.pitch = 0;
+                source.pitch = 1.0f;
 
-                    randomChoice = UnityEngine.Random.Range(0, 2);
-                }
+                randomChoice = UnityEngine.Random.Range(0.7f, 1.3f);
             }
         }
     }
@@ -88,12 +83,9 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                if (source.clip != TongueHit)
-                {
-                    instance.source.Stop();
-                    instance.source.clip = instance.TongueHit;
-                    instance.source.Play();
-                }
+                instance.source.Stop();
+                instance.source.clip = instance.TongueHit;
+                instance.source.Play();
             }
         }
     }
@@ -104,17 +96,14 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                if (source.clip != TongueRetract)
-                {
-                    instance.source.Stop();
-                    instance.source.clip = instance.TongueRetract;
-                    source.pitch = randomChoice;
-                    instance.source.Play();
+                instance.source.Stop();
+                instance.source.clip = instance.TongueRetract;
+                source.pitch = randomChoice;
+                instance.source.Play();
 
-                    source.pitch = 0;
+                source.pitch = 1.0f;
 
-                    randomChoice = UnityEngine.Random.Range(0, 2);
-                }
+                randomChoice = UnityEngine.Random.Range(0.7f, 1.3f);
             }
         }
     }
@@ -125,12 +114,9 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                if (source.clip != Bonk)
-                {
-                    instance.source.Stop();
-                    instance.source.clip = instance.Bonk;
-                    instance.source.Play();
-                }
+                instance.source.Stop();
+                instance.source.clip = instance.Bonk;
+                instance.source.Play();
             }
         }
     }
@@ -141,12 +127,9 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                if (source.clip != menuHover)
-                {
-                    instance.source.Stop();
-                    instance.source.clip = instance.menuHover;
-                    instance.source.Play();
-                }
+                instance.source.Stop();
+                instance.source.clip = instance.menuHover;
+                instance.source.Play();
             }
         }
     }
@@ -157,12 +140,9 @@ public class AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                if (source.clip != menuClick)
-                {
-                    instance.source.Stop();
-                    instance.source.clip = instance.menuClick;
-                    instance.source.Play();
-                }
+                instance.source.Stop();
+                instance.source.clip = instance.menuClick;
+                instance.source.Play();
             }
         }
     }
