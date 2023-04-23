@@ -56,8 +56,6 @@ public class StatTracking : MonoBehaviour
     //Then it updates ScoreInfo if necessary and destroys itself.
     void TallyScores()
     {
-        print(fliesEaten.ToString() + " / " + flyTotal.ToString() + "flies!");
-
         flyText = GameObject.Find("Text_Final_Score").GetComponent<TextMeshProUGUI>();
             
         flyText.text = fliesEaten.ToString() + " / " + flyTotal.ToString() + " flies!";
@@ -83,6 +81,9 @@ public class StatTracking : MonoBehaviour
 
                 if (fliesEaten > scoreIndexes.BestLevel3)
                 {scoreIndexes.BestLevel3 = fliesEaten;}
+                break;
+
+            default:
                 break;
         }
 
