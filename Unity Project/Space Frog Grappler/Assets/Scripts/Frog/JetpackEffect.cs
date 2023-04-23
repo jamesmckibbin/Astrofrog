@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scr_Jetpack_Effect : MonoBehaviour
+public class JetpackEffect : MonoBehaviour
 {
     public IEnumerator coroutine;
     public bool PackinTime = false;

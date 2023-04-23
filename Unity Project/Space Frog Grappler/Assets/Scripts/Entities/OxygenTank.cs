@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scr_Oxygen_Tank : MonoBehaviour
+public class OxygenTank : MonoBehaviour
 {
     [SerializeField] int oxygenGranted;
 
@@ -10,6 +10,6 @@ public class Scr_Oxygen_Tank : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player")
-        {GameObject.Find("Oxygen_Meter").GetComponent<Scr_Oxygen_Meter>().AddOxygen(oxygenGranted);}
+        {GameObject.Find("Oxygen_Meter").GetComponent<OxygenMeter>().AddOxygen(oxygenGranted);}
     }
 }

@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ba2313444a8004baaceb731e8b7458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbed: 0
+  Grabbed: 0
 --- !u!114 &670213951334520610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 551029737579133985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a7d812d87b13eb4d8cde3b9cca6f1e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 51d46b951e9c4184495f91b6560e9b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration1: 10

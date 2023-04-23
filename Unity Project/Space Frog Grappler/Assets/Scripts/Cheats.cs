@@ -13,20 +13,19 @@ public class Cheats : MonoBehaviour
     public OxygenMeter OxygenMeter;
     public SceneInfo sceneIndexes;
     private SceneSwitcher sceneSwitcher;
+    private JetpackEffect jetpack;
 
     private void Start()
     {
         sceneSwitcher = FindObjectOfType<SceneSwitcher>();
-        jetpack = FindObjectOfType<Scr_Jetpack_Effect>();
+        jetpack = FindObjectOfType<JetpackEffect>();
     }
 
     void Update()
     {
         //Go back to the title screen.
         if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            sceneSwitcher.LoadScene(sceneIndexes.TitleScreen);
-        }
+        {sceneSwitcher.LoadScene(sceneIndexes.TitleScreen);}
 
         //Good for going to the game over screen quickly.
         if (Input.GetKeyDown(KeyCode.Alpha1))

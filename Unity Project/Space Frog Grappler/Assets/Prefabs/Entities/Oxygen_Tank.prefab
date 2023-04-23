@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ba2313444a8004baaceb731e8b7458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbed: 0
+  Grabbed: 0
 --- !u!114 &3343919236023232138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,10 +136,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 551029737579133985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a3eac96e937fa45825751d007842f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 021461cc97372ae478975ad55b36a594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygenGranted: 50
+  oxygenGranted: 0
 --- !u!1 &3119375358068038149
 GameObject:
   m_ObjectHideFlags: 0
