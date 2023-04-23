@@ -8,22 +8,20 @@ public class Scr_Jetpack_Effect : MonoBehaviour
     public bool PackinTime = false;
 
     [SerializeField] Rigidbody2D frogRb;
-    private float propulsion;
 
     public void JetpackStart(float duration2)
     {StartCoroutine(JetpackDuration(duration2));}
 
-    //Propels the frog forward for as long as the jetpack is active.
+    //Propulsion for when the jetpack is active.
     void FixedUpdate()
     {
         if (PackinTime)
         {
-            frogRb.velocity = transform.up * propulsion;
-            
-            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-            {propulsion = Mathf.Clamp(propulsion - 0.1f, 0.0f, 8);}
-            else
-            {propulsion = Mathf.Clamp(propulsion + 0.09f, 0.0f, 8);}
+            //Propels the frog forward if their speed in the direction they're facing isn't at a set amount.
+            float velocityInDirection = Vector3.Dot(frogRb.velocity, transform.up);
+
+            if (velocityInDirection < 8.0f)
+            {frogRb.AddForce(transform.up * 5.0f);}
         }
     }
 
