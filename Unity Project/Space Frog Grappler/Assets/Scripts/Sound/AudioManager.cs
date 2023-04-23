@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class AudioManager : MonoBehaviour
     public float randomChoice = 0;
 
     //Creates an audiomanager instance and and audiosurce
-    private AudioSource source;
+    public AudioSource source;
     private static AudioManager instance;
 
     public void Awake()
@@ -37,15 +39,14 @@ public class AudioManager : MonoBehaviour
         randomChoice = UnityEngine.Random.Range(0, 2);
     }
 
-    public void Start()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Finds the audiomanager
-        source = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+        source = GameObject.Find("MusicManager").GetComponent<AudioSource>();
     }
 
-    //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
+        //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
 
-    public void ChompSFX()
+        public void ChompSFX()
     {
         if (instance != null)
         {

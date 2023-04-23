@@ -716,6 +716,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5889173001072963551, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1888971906}
+    - target: {fileID: 5889173001072963551, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
       propertyPath: menuClick
       value: 
       objectReference: {fileID: 8300000, guid: c69c3729cd093234a97ddc51c5a9ea90, type: 3}
@@ -725,6 +729,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 74f839c1f11c3884a8fb1a21df7e1d5d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+--- !u!82 &1888971906 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5889173001072963548, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+  m_PrefabInstance: {fileID: 1823582984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1913725547
 GameObject:
   m_ObjectHideFlags: 0
