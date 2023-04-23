@@ -16,6 +16,7 @@ public class S_AudioManager : MonoBehaviour
     public AudioClip Bonk;
     public AudioClip menuHover;
     public AudioClip menuClick;
+    public AudioClip Croak;
 
     public float randomChoice = 0;
 
@@ -36,7 +37,7 @@ public class S_AudioManager : MonoBehaviour
             return;
         }
 
-        randomChoice = UnityEngine.Random.Range(0.7f, 1.3f);
+        randomChoice = UnityEngine.Random.Range(0.5f, 2.5f);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -65,14 +66,14 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
+                randomChoice = UnityEngine.Random.Range(0.5f, 10.5f);
+
                 instance.source.Stop();
                 instance.source.clip = instance.TongueLaunch;
                 source.pitch = randomChoice;
                 instance.source.Play();
 
                 source.pitch = 1.0f;
-
-                randomChoice = UnityEngine.Random.Range(0.7f, 1.3f);
             }
         }
     }
@@ -96,14 +97,14 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
+                randomChoice = UnityEngine.Random.Range(0.5f, 2.5f);
+
                 instance.source.Stop();
                 instance.source.clip = instance.TongueRetract;
                 source.pitch = randomChoice;
                 instance.source.Play();
 
                 source.pitch = 1.0f;
-
-                randomChoice = UnityEngine.Random.Range(0.7f, 1.3f);
             }
         }
     }
@@ -142,6 +143,19 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.menuClick;
+                instance.source.Play();
+            }
+        }
+    }
+
+    public void CroakSFX()
+    {
+        if (instance != null)
+        {
+            if (instance.source != null)
+            {
+                instance.source.Stop();
+                instance.source.clip = instance.Croak;
                 instance.source.Play();
             }
         }

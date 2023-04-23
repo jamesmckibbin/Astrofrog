@@ -34,6 +34,11 @@ public class S_PlayerInput : MonoBehaviour
         {
             RetractTongue?.Invoke();
         }
+
+        if (Input.GetButtonUp("Tongue"))
+        {
+            RetractTongue?.Invoke();
+        }
     }
 
     private void FixedUpdate()
