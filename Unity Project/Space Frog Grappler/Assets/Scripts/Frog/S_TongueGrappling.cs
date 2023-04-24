@@ -26,14 +26,17 @@ public class S_TongueGrappling : MonoBehaviour
         {
             if (flying)
             {
-                Vector3[] positions = new Vector3[2] { frog.transform.position, transform.position };
+                Vector3[] positions = new Vector3[2] { 
+                    new Vector3(frog.transform.position.x, frog.transform.position.y, -1),
+                    new Vector3(transform.position.x, transform.position.y, -1)
+                };
                 tongueLR.SetPositions(positions);
                 UnparentedMove();
             }
 
             else
             {
-                Vector3[] positions = new Vector3[2] { new Vector3(0, 0, 0), new Vector3(0, 0, 0) };
+                Vector3[] positions = new Vector3[2] { new Vector3(0, 0, -1), new Vector3(0, 0, -1) };
                 tongueLR.SetPositions(positions);
             }
         }

@@ -8,7 +8,7 @@ public class S_PlayerHurt : MonoBehaviour
     //If the frog gets hurt (i.e. spikes, ingesting poison) this is called externally.
     public void Pain()
     {
-        animator = GetComponentInChildren<Animator>();
+        animator = GameObject.Find("EffectScreen").GetComponent<Animator>();
         FindObjectOfType<S_OxygenMeter>().RemoveOxygen(25);
         animator.SetTrigger("Hurt");
     }
