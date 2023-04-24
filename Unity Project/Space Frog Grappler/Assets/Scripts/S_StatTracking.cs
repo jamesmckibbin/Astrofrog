@@ -19,16 +19,21 @@ public class S_StatTracking : MonoBehaviour
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "Sce_Level_1":
+            case "Level1":
                 whatLevel = 1;
                 break;
 
-            case "Sce_Level_2":
+            case "Level2":
                 whatLevel = 2;
                 break;
 
-            case "Sce_Level_3":
+            case "Level3":
                 whatLevel = 3;
+                break;
+
+            default:
+                print("hey, this level ain't named right!");
+                Destroy(this.gameObject);
                 break;
         }
 
@@ -38,18 +43,17 @@ public class S_StatTracking : MonoBehaviour
     //Regularly grabs how many flies have been eaten. 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name.Contains("Level1"))
-        {
-            fliesEaten = GameObject.Find("Text_Fly_Counter").GetComponent<S_FlyCounter>().fliesEaten;
-        }
+        if (SceneManager.GetActiveScene().name == "Level1" ||
+        SceneManager.GetActiveScene().name == "Level2" ||
+        SceneManager.GetActiveScene().name == "Level3")
+        {fliesEaten = GameObject.Find("Text_Fly_Counter").GetComponent<S_FlyCounter>().fliesEaten;}
 
-        if (SceneManager.GetActiveScene().name == "GameOver" ||
-            SceneManager.GetActiveScene().name == "CompletedLevel")
-        {
-            TallyScores();
-        }
+        else if (SceneManager.GetActiveScene().name == "GameOver" ||
+        SceneManager.GetActiveScene().name == "CompletedLevel")
+        {TallyScores();}
 
-        else if (SceneManager.GetActiveScene().name == "LevelSelect") {}
+        else if (SceneManager.GetActiveScene().name == "LevelSelect")
+        {Destroy(this.gameObject);}
     }
 
     //Gives its numbers to the level complete / game over screen.
