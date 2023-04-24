@@ -344,7 +344,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 93fd4f90d7ac56f4d91891d3c3150c99, type: 3}
-  m_Color: {r: 0.60837376, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -403,9 +403,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000017370578, y: 0.14571498}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.43438175
+  m_Radius: 4
 --- !u!114 &6309345591532754095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +516,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.4
       minScalar: 0.2
       maxCurve:
         serializedVersion: 2
@@ -569,8 +569,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 16
-      minScalar: 12
+      scalar: 40
+      minScalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -685,8 +685,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.2
-      minScalar: 1
+      scalar: 4.8
+      minScalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -738,8 +738,8 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 1
+      scalar: 4
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -791,8 +791,8 @@ ParticleSystem:
     startSizeZ:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 1
+      scalar: 4
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
