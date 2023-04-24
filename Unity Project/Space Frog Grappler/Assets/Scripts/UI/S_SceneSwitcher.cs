@@ -15,7 +15,7 @@ public class S_SceneSwitcher : MonoBehaviour
     public IEnumerator LoadScene(int levelIndex)
     {
         transition.SetTrigger("End");
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSecondsRealtime(1.0f);
         SceneManager.LoadScene(levelIndex);
     }
 }

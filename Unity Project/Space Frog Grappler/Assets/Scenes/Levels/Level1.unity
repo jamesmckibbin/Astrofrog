@@ -184,6 +184,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81ee91d79e1845f42ad7df7ffd9e51e7, type: 3}
+--- !u!114 &61971925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7095658121011973716, guid: 81ee91d79e1845f42ad7df7ffd9e51e7, type: 3}
+  m_PrefabInstance: {fileID: 61971924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c9d4c5593283c44b6b10241fc88734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &219146498
 GameObject:
   m_ObjectHideFlags: 0
@@ -46904,6 +46915,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 520
       objectReference: {fileID: 0}
+    - target: {fileID: 5980612729592501827, guid: fbc7270cd79f0c44c9acf33dfd6cbc86, type: 3}
+      propertyPath: SceneIndexes
+      value: 
+      objectReference: {fileID: 11400000, guid: bdde0d7e252100545a5bbd6583ef25b0, type: 2}
+    - target: {fileID: 5980612729592501827, guid: fbc7270cd79f0c44c9acf33dfd6cbc86, type: 3}
+      propertyPath: SceneSwitcher
+      value: 
+      objectReference: {fileID: 61971925}
     - target: {fileID: 6024811436901636095, guid: fbc7270cd79f0c44c9acf33dfd6cbc86, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
