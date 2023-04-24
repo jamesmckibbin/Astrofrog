@@ -17,6 +17,7 @@ public class S_Cheats : MonoBehaviour
 
     private void Start()
     {
+        OxygenMeter = FindObjectOfType<S_OxygenMeter>();
         sceneSwitcher = FindObjectOfType<S_SceneSwitcher>();
         jetpack = FindObjectOfType<S_JetpackEffect>();
     }

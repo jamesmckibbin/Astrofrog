@@ -37,7 +37,17 @@ public class S_StatTracking : MonoBehaviour
                 break;
         }
 
+        StartCoroutine(TotalFind());
+    }
+
+    //The tracker waits for a frame before grabbing information from S_FlyCounter.
+    //This prevents a bug where the tracker searched the fly counter prematurely, so it would only find a zero.
+    IEnumerator TotalFind()
+    {
+        yield return 0;
+
         flyTotal = GameObject.Find("Text_Fly_Counter").GetComponent<S_FlyCounter>().flyTotal;
+        print(flyTotal);
     }
 
     //Regularly grabs how many flies have been eaten. 
@@ -52,7 +62,7 @@ public class S_StatTracking : MonoBehaviour
         SceneManager.GetActiveScene().name == "CompletedLevel")
         {TallyScores();}
 
-        else if (SceneManager.GetActiveScene().name == "LevelSelect")
+        else
         {Destroy(this.gameObject);}
     }
 
@@ -60,6 +70,7 @@ public class S_StatTracking : MonoBehaviour
     //Then it updates ScoreInfo if necessary and destroys itself.
     void TallyScores()
     {
+        
         flyText = GameObject.Find("Text_Final_Score").GetComponent<TextMeshProUGUI>();
             
         flyText.text = fliesEaten.ToString() + " / " + flyTotal.ToString() + " flies!";
