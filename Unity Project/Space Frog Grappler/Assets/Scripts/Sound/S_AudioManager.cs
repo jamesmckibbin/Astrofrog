@@ -37,7 +37,7 @@ public class S_AudioManager : MonoBehaviour
             return;
         }
 
-        randomChoice = UnityEngine.Random.Range(0.5f, 2.5f);
+        randomChoice = UnityEngine.Random.Range(0.8f, 1.2f);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -55,6 +55,7 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.Chomp;
+                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
@@ -66,14 +67,12 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                randomChoice = UnityEngine.Random.Range(0.5f, 10.5f);
+                randomChoice = UnityEngine.Random.Range(0.8f, 1.2f);
 
                 instance.source.Stop();
                 instance.source.clip = instance.TongueLaunch;
                 source.pitch = randomChoice;
                 instance.source.Play();
-
-                source.pitch = 1.0f;
             }
         }
     }
@@ -86,6 +85,7 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.TongueHit;
+                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
@@ -97,14 +97,12 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                randomChoice = UnityEngine.Random.Range(0.5f, 2.5f);
+                randomChoice = UnityEngine.Random.Range(0.8f, 1.2f);
 
                 instance.source.Stop();
                 instance.source.clip = instance.TongueRetract;
                 source.pitch = randomChoice;
                 instance.source.Play();
-
-                source.pitch = 1.0f;
             }
         }
     }
@@ -117,6 +115,7 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.Bonk;
+                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
@@ -130,6 +129,7 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.menuHover;
+                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
@@ -143,6 +143,7 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.menuClick;
+                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
@@ -156,6 +157,7 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.Croak;
+                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
