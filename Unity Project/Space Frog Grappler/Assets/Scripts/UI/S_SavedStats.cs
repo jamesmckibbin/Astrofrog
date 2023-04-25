@@ -10,8 +10,7 @@ public class S_SavedStats : MonoBehaviour
     [SerializeField] ScoreInfo scoreIndexes;
     [SerializeField] S_LevelSelectWheel wheel;
 
-    private int maxFliesToCheck;
-    private int bestFliesToCheck;
+    private int maxFliesToCheck, bestFliesToCheck;
     private float bestTimeToCheck;
 
     private string lineFlies;
@@ -50,7 +49,7 @@ public class S_SavedStats : MonoBehaviour
         {
             if (maxFliesToCheck == 0)
             {
-                lineFlies = "Flies eaten: 0/?";
+                lineFlies = "Flies eaten: 0 / ?";
                 lineTime = "Best time: Not set!";
             }
 
@@ -63,7 +62,7 @@ public class S_SavedStats : MonoBehaviour
             else
             {
                 lineFlies = "Flies eaten: " + bestFliesToCheck + " / " + maxFliesToCheck;
-                lineTime = "Best time: " + bestTimeToCheck;
+                lineTime = "Best time: " + bestTimeToCheck.ToString("F2") + " s";
             }
 
             statsText.text = lineFlies + System.Environment.NewLine + lineTime;
