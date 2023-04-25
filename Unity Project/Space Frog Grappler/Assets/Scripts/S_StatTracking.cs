@@ -78,24 +78,24 @@ public class S_StatTracking : MonoBehaviour
         switch (whatLevel)
         {
             case 1:
-                scoreIndexes.MaxLevel1 = flyTotal;
+                scoreIndexes.MaxFlies1 = flyTotal;
 
-                if (fliesEaten > scoreIndexes.BestLevel1)
-                {scoreIndexes.BestLevel1 = fliesEaten;}
+                if (fliesEaten > scoreIndexes.BestFlies1)
+                {scoreIndexes.BestFlies1 = fliesEaten;}
                 break;
 
             case 2:
-                scoreIndexes.MaxLevel2 = flyTotal;
+                scoreIndexes.MaxFlies2 = flyTotal;
 
-                if (fliesEaten > scoreIndexes.BestLevel2)
-                {scoreIndexes.BestLevel2 = fliesEaten;}
+                if (fliesEaten > scoreIndexes.BestFlies2)
+                {scoreIndexes.BestFlies2 = fliesEaten;}
                 break;
 
             case 3:
-                scoreIndexes.MaxLevel3 = flyTotal;
+                scoreIndexes.MaxFlies3 = flyTotal;
 
-                if (fliesEaten > scoreIndexes.BestLevel3)
-                {scoreIndexes.BestLevel3 = fliesEaten;}
+                if (fliesEaten > scoreIndexes.BestFlies3)
+                {scoreIndexes.BestFlies3 = fliesEaten;}
                 break;
 
             default:
