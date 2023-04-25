@@ -6,5 +6,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ScoreInfo : ScriptableObject
 {
-    public int MaxLevel1, MaxLevel2, MaxLevel3, BestLevel1, BestLevel2, BestLevel3;
+    public int MaxFlies1, MaxFlies2, MaxFlies3, BestFlies1, BestFlies2, BestFlies3;
+    public float BestTime1, BestTime2, BestTime3;
 }
