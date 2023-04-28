@@ -10,6 +10,9 @@ public class S_OxygenMeter : MonoBehaviour
     public float MaxOxygenValue;
     public GameObject OxygenMeterBar;
     public TextMeshProUGUI text;
+    float count = 0f;
+    public bool beepSlow = false;
+    public bool beepFast = false;
 
     private Slider oxygenMeter;
     private float totalOxygenAdded;
@@ -24,6 +27,7 @@ public class S_OxygenMeter : MonoBehaviour
         oxygenMeter = GetComponent<Slider>();
         CurrentOxygen = MaxOxygenValue;
         text.text = MaxOxygenValue.ToString();
+        InvokeRepeating("OxygenBeep", 0, 1.0f);
     }
 
     // Adjusts the oxygen meter and sets the bar on the UI
@@ -34,15 +38,22 @@ public class S_OxygenMeter : MonoBehaviour
             CurrentOxygen = 0;
             GameObject.Find("ButtonManager").GetComponent<S_ButtonManager>().GoToGameOver();
         }
-
         else if (CurrentOxygen < MaxOxygenValue * 0.33)
         {
             OxygenMeterBar.GetComponent<Image>().color = lowHealthColor;
+            beepSlow = true;
+            beepFast = false;
         }
-
+        else if(CurrentOxygen < MaxOxygenValue * 0.10)
+        {
+            beepSlow = false;
+            beepFast = true;
+        }
         else
         {
             OxygenMeterBar.GetComponent<Image>().color = normalHealthColor;
+            beepSlow = false;
+            beepFast = false;
         }
 
         oxygenMeter.maxValue = MaxOxygenValue;
@@ -67,5 +78,23 @@ public class S_OxygenMeter : MonoBehaviour
     public void RemoveOxygen(float value)
     {
         totalOxygenRemoved += value;
+    }
+
+    void OxygenBeep()
+    {
+        if (count >= 5 && beepSlow == true && beepFast != true)
+        {
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().OxygenBeepSFX();
+            count = 0f;
+        }
+        else if(count >= 1 && beepFast == true && beepSlow != true)
+        {
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().OxygenBeepSFX();
+            count = 0f;
+        }
+        else
+        {
+            count++;
+        }
     }
 }

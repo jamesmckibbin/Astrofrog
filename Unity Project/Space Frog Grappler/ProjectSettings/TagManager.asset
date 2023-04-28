@@ -16,6 +16,7 @@ TagManager:
   - FlyPoisonous
   - FlySpiky
   - SelectMusic
+  - FrogIsHere
   layers:
   - Default
   - TransparentFX

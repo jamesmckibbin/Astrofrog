@@ -39,6 +39,11 @@ public class S_PlayerInput : MonoBehaviour
         {
             RetractTongue?.Invoke();
         }
+
+        if (Input.GetButtonDown("Croak"))
+        {
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().CroakSFX();
+        }
     }
 
     private void FixedUpdate()

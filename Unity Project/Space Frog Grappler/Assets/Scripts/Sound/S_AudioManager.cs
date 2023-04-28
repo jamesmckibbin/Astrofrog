@@ -17,11 +17,16 @@ public class S_AudioManager : MonoBehaviour
     public AudioClip menuHover;
     public AudioClip menuClick;
     public AudioClip Croak;
+    public AudioClip oxygenBeep;
 
     public float randomChoice = 0;
 
     //Creates an audiomanager instance and and audiosurce
     public AudioSource source;
+    public AudioSource croakSource;
+    public AudioSource chompSource;
+    public AudioSource bonkSource;
+    public AudioSource oxygenSource;
     private static S_AudioManager instance;
 
     public void Awake()
@@ -40,23 +45,17 @@ public class S_AudioManager : MonoBehaviour
         randomChoice = UnityEngine.Random.Range(0.8f, 1.2f);
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        source = GameObject.Find("MusicManager").GetComponent<AudioSource>();
-    }
-
         //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
 
-        public void ChompSFX()
+    public void ChompSFX()
     {
         if (instance != null)
         {
-            if (instance.source != null)
+            if (instance.chompSource != null)
             {
-                instance.source.Stop();
-                instance.source.clip = instance.Chomp;
-                source.pitch = 1.0f;
-                instance.source.Play();
+                instance.chompSource.Stop();
+                instance.chompSource.clip = instance.Chomp;
+                instance.chompSource.Play();
             }
         }
     }
@@ -73,6 +72,7 @@ public class S_AudioManager : MonoBehaviour
                 instance.source.clip = instance.TongueLaunch;
                 source.pitch = randomChoice;
                 instance.source.Play();
+                source.pitch = 1.0f;
             }
         }
     }
@@ -85,7 +85,6 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.TongueHit;
-                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
@@ -103,6 +102,7 @@ public class S_AudioManager : MonoBehaviour
                 instance.source.clip = instance.TongueRetract;
                 source.pitch = randomChoice;
                 instance.source.Play();
+                source.pitch = 1.0f;
             }
         }
     }
@@ -111,12 +111,11 @@ public class S_AudioManager : MonoBehaviour
     {
         if (instance != null)
         {
-            if (instance.source != null)
+            if (instance.bonkSource != null)
             {
-                instance.source.Stop();
-                instance.source.clip = instance.Bonk;
-                source.pitch = 1.0f;
-                instance.source.Play();
+                instance.bonkSource.Stop();
+                instance.bonkSource.clip = instance.Bonk;
+                instance.bonkSource.Play();
             }
         }
     }
@@ -153,12 +152,28 @@ public class S_AudioManager : MonoBehaviour
     {
         if (instance != null)
         {
-            if (instance.source != null)
+            if (instance.croakSource != null)
             {
-                instance.source.Stop();
-                instance.source.clip = instance.Croak;
+                if (GameObject.FindWithTag("FrogIsHere"))
+                {
+                    instance.croakSource.Stop();
+                    instance.croakSource.clip = instance.Croak;
+                    instance.croakSource.Play();
+                }
+            }
+        }
+    }
+
+    public void OxygenBeepSFX()
+    {
+        if (instance != null)
+        {
+            if (instance.oxygenSource != null)
+            {
+                instance.oxygenSource.Stop();
+                instance.oxygenSource.clip = instance.oxygenBeep;
                 source.pitch = 1.0f;
-                instance.source.Play();
+                instance.oxygenSource.Play();
             }
         }
     }

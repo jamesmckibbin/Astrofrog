@@ -702,6 +702,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6063671005884687645, guid: 98c1f45ef9d25624681f2101f099f826, type: 3}
   m_PrefabInstance: {fileID: 1572920756}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1806977278 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5600836672761480284, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+  m_PrefabInstance: {fileID: 1823582984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1823582984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,6 +714,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 429411517064440676, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 429411517064440676, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093852311530034875, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+      propertyPath: Croak
+      value: 
+      objectReference: {fileID: 8300000, guid: fd70c7955a86b9e4c8b5deb45c4f5b02, type: 3}
+    - target: {fileID: 1093852311530034875, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+      propertyPath: croakSource
+      value: 
+      objectReference: {fileID: 1806977278}
+    - target: {fileID: 5600836672761480284, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5889173001072963548, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
       propertyPath: m_Volume
       value: 0.5
