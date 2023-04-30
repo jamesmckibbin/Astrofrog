@@ -19,7 +19,7 @@ public class S_FlyCounter : MonoBehaviour
         fliesEaten = 0;
 
         //Concatenates the numbers into the text that will be shown on the UI.
-        flyText.text = "Flies Left: " + fliesEaten.ToString() + " / " + flyTotal.ToString();
+        flyText.text = "Flies Eaten: " + fliesEaten.ToString() + "/" + flyTotal.ToString();
     }
 
     public void CounterUpdate()
@@ -27,6 +27,6 @@ public class S_FlyCounter : MonoBehaviour
         fliesEaten++;
 
         //Concatenates the numbers again.
-        flyText.text = "Flies Left: " + fliesEaten.ToString() + " / " + flyTotal.ToString();
+        flyText.text = "Flies Eaten: " + fliesEaten.ToString() + "/" + flyTotal.ToString();
     }
 }

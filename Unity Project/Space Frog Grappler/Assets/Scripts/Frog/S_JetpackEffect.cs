@@ -21,9 +21,9 @@ public class S_JetpackEffect : MonoBehaviour
             //Propels the frog forward if their speed in the direction they're facing isn't at a set amount.
             float velocityInDirection = Vector3.Dot(frogRb.velocity, transform.up);
 
-            if (velocityInDirection < 8.0f)
+            if (velocityInDirection < 7.0f)
             {
-                frogRb.AddForce(transform.up * 5.0f);
+                frogRb.AddForce(transform.up * 10.0f);
                 nitroJet.Play();
             }
 
