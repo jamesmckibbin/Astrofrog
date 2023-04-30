@@ -18,6 +18,7 @@ TagManager:
   - SelectMusic
   - Checkpoint
   - FrogIsHere
+  - Level2Music
   layers:
   - Default
   - TransparentFX
