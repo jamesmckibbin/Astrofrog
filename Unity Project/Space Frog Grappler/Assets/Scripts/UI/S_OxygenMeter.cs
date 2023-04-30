@@ -49,11 +49,9 @@ public class S_OxygenMeter : MonoBehaviour
 
         else if (CurrentOxygen < MaxOxygenValue * 0.7)
         {
-            gradientPos = ((CurrentOxygen / MaxOxygenValue) - 0.2f) * 2.0f;
+            gradientPos = (CurrentOxygen / MaxOxygenValue) - 0.2f;
 
-            print(gradientPos);
-
-            OxygenMeterBar.GetComponent<Image>().color = (normalHealthColor * gradientPos) + (lowHealthColor * (1 - gradientPos));
+            OxygenMeterBar.GetComponent<Image>().color = Color.HSVToRGB(0 + gradientPos, 1, 1);
             beepSlow = false;
             beepFast = false;
         }
