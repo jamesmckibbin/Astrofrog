@@ -21,6 +21,7 @@ public class S_OxygenMeter : MonoBehaviour
 
     private Color normalHealthColor = Color.cyan;
     private Color lowHealthColor = Color.red;
+    private float gradientPos;
 
     // Grabs Slider component located on OxygenMeter
     void Start()
@@ -38,12 +39,25 @@ public class S_OxygenMeter : MonoBehaviour
             CurrentOxygen = 0;
             GameObject.Find("ButtonManager").GetComponent<S_ButtonManager>().GoToGameOver();
         }
-        else if (CurrentOxygen < MaxOxygenValue * 0.33)
+
+        else if (CurrentOxygen < MaxOxygenValue * 0.2)
         {
             OxygenMeterBar.GetComponent<Image>().color = lowHealthColor;
             beepSlow = true;
             beepFast = false;
         }
+
+        else if (CurrentOxygen < MaxOxygenValue * 0.7)
+        {
+            gradientPos = ((CurrentOxygen / MaxOxygenValue) - 0.2f) * 2.0f;
+
+            print(gradientPos);
+
+            OxygenMeterBar.GetComponent<Image>().color = (normalHealthColor * gradientPos) + (lowHealthColor * (1 - gradientPos));
+            beepSlow = false;
+            beepFast = false;
+        }
+
         else
         {
             OxygenMeterBar.GetComponent<Image>().color = normalHealthColor;
