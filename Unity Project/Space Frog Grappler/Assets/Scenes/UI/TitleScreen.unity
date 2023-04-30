@@ -631,6 +631,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 6ec71ea5ddf6c2f46ab9de5eb5d339cc, type: 3}
     - target: {fileID: 3414769224443990278, guid: 37403c357eb810744b6f0eb034ecafdd, type: 3}
+      propertyPath: victoryMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ab4f956e00a3134ca39b57207abcc1f, type: 3}
+    - target: {fileID: 3414769224443990278, guid: 37403c357eb810744b6f0eb034ecafdd, type: 3}
       propertyPath: mainMenuMusic
       value: 
       objectReference: {fileID: 8300000, guid: 7ef6dc4fcd7854e43958a0e666d1dc69, type: 3}
