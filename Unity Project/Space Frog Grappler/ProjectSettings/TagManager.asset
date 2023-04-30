@@ -18,6 +18,7 @@ TagManager:
   - SelectMusic
   - Checkpoint
   - WinMusic
+  - GameoverMusic
   layers:
   - Default
   - TransparentFX

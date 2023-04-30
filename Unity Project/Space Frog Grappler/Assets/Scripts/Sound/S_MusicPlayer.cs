@@ -13,6 +13,7 @@ public class S_MusicPlayer : MonoBehaviour
     public AudioClip level1Music;
     public AudioClip selectMusic;
     public AudioClip victoryMusic;
+    public AudioClip gameOverMusic;
 
     //Creates an audiomanager instance and and audiosurce
     private static S_MusicPlayer instance;
@@ -74,6 +75,15 @@ public class S_MusicPlayer : MonoBehaviour
             {
                 instance.source.Stop();
                 instance.source.clip = instance.victoryMusic;
+                instance.source.Play();
+            }
+        }
+        else if (GameObject.FindWithTag("GameoverMusic"))
+        {
+            if (source.clip != selectMusic)
+            {
+                instance.source.Stop();
+                instance.source.clip = instance.gameOverMusic;
                 instance.source.Play();
             }
         }
