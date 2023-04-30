@@ -10,7 +10,8 @@ public class S_OxygenMeter : MonoBehaviour
     public float MaxOxygenValue;
     public GameObject OxygenMeterBar;
     public TextMeshProUGUI text;
-    float count = 0f;
+    public float count = 0f;
+    public int seconds;
     public bool beepSlow = false;
     public bool beepFast = false;
 
@@ -27,7 +28,6 @@ public class S_OxygenMeter : MonoBehaviour
         oxygenMeter = GetComponent<Slider>();
         CurrentOxygen = MaxOxygenValue;
         text.text = MaxOxygenValue.ToString();
-        InvokeRepeating("OxygenBeep", 0, 1.0f);
     }
 
     // Adjusts the oxygen meter and sets the bar on the UI
@@ -44,11 +44,6 @@ public class S_OxygenMeter : MonoBehaviour
             beepSlow = true;
             beepFast = false;
         }
-        else if(CurrentOxygen < MaxOxygenValue * 0.10)
-        {
-            beepSlow = false;
-            beepFast = true;
-        }
         else
         {
             OxygenMeterBar.GetComponent<Image>().color = normalHealthColor;
@@ -56,10 +51,22 @@ public class S_OxygenMeter : MonoBehaviour
             beepFast = false;
         }
 
+        if (CurrentOxygen < MaxOxygenValue * 0.15)
+        {
+            beepSlow = false;
+            beepFast = true;
+            print(beepFast);
+        }
+
         oxygenMeter.maxValue = MaxOxygenValue;
         CurrentOxygen = MaxOxygenValue + totalOxygenAdded - totalOxygenRemoved - Time.timeSinceLevelLoad;
         oxygenMeter.value = CurrentOxygen;
         text.text = Mathf.Round(CurrentOxygen).ToString();
+
+        count += Time.deltaTime;
+        seconds = (int)count % 60;
+
+        OxygenBeep();
     }
 
     // Updates the maximum oxygen
@@ -82,19 +89,22 @@ public class S_OxygenMeter : MonoBehaviour
 
     void OxygenBeep()
     {
-        if (count >= 5 && beepSlow == true && beepFast != true)
+        if (seconds == 5  && beepSlow == true && beepFast == false)
         {
             GameObject.Find("AudioManager").GetComponent<S_AudioManager>().OxygenBeepSFX();
-            count = 0f;
+            count = 0;
+            seconds = 0;
         }
-        else if(count >= 1 && beepFast == true && beepSlow != true)
+        else if(seconds == 1 && beepFast == true && beepSlow == false)
         {
             GameObject.Find("AudioManager").GetComponent<S_AudioManager>().OxygenBeepSFX();
-            count = 0f;
+            count = 0;
+            seconds = 0;
         }
-        else
+        else if (seconds > 6)
         {
-            count++;
+            count = 0;
+            seconds = 0;
         }
     }
 }
