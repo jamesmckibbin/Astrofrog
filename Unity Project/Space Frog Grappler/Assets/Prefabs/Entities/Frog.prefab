@@ -135,6 +135,8 @@ MonoBehaviour:
   - FlyEdible
   - FlyPoisonous
   - FlySpiky
+  - Respawn
+  - Checkpoint
   shootSpeed: 25
   retractSpeed: 100
   maxRange: 15
@@ -279,6 +281,7 @@ GameObject:
   - component: {fileID: 3172507380930292659}
   - component: {fileID: 3039649679466638492}
   - component: {fileID: 8578148406495637964}
+  - component: {fileID: 4061931660652788409}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Player
@@ -5212,3 +5215,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4061931660652788409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872477949694520949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d001bf23af2280d4dbf351564ceb6793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frog: {fileID: 1872477949694520905}

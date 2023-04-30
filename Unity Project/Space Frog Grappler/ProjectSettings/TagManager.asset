@@ -16,6 +16,7 @@ TagManager:
   - FlyPoisonous
   - FlySpiky
   - SelectMusic
+  - Checkpoint
   - FrogIsHere
   layers:
   - Default
