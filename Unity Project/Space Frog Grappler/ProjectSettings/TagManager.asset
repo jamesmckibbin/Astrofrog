@@ -17,7 +17,7 @@ TagManager:
   - FlySpiky
   - SelectMusic
   - Checkpoint
-  - FrogIsHere
+  - WinMusic
   layers:
   - Default
   - TransparentFX
