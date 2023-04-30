@@ -95,6 +95,16 @@ public class S_TongueGrappling : MonoBehaviour
             {
                 outgoing = false;
             }
+
+            //Plays different sound effects based on which type bad surface the tongue touches
+            if(collision.gameObject.CompareTag("FlySpiky"))
+            {
+                GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ForceFieldSFX();
+            }
+            else if(collision.gameObject.CompareTag("FlyPoisonous"))
+            {
+
+            }
         }
     }
     

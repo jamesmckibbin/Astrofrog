@@ -18,6 +18,7 @@ public class S_AudioManager : MonoBehaviour
     public AudioClip menuClick;
     public AudioClip Croak;
     public AudioClip oxygenBeep;
+    public AudioClip ForceField;
 
     public float randomChoice = 0;
 
@@ -27,6 +28,7 @@ public class S_AudioManager : MonoBehaviour
     public AudioSource chompSource;
     public AudioSource bonkSource;
     public AudioSource oxygenSource;
+    public AudioSource forceSource;
     private static S_AudioManager instance;
 
     public void Awake()
@@ -154,12 +156,9 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.croakSource != null)
             {
-                if (GameObject.FindWithTag("FrogIsHere"))
-                {
-                    instance.croakSource.Stop();
-                    instance.croakSource.clip = instance.Croak;
-                    instance.croakSource.Play();
-                }
+                instance.croakSource.Stop();
+                instance.croakSource.clip = instance.Croak;
+                instance.croakSource.Play();
             }
         }
     }
@@ -172,8 +171,20 @@ public class S_AudioManager : MonoBehaviour
             {
                 instance.oxygenSource.Stop();
                 instance.oxygenSource.clip = instance.oxygenBeep;
-                source.pitch = 1.0f;
                 instance.oxygenSource.Play();
+            }
+        }
+    }
+
+    public void ForceFieldSFX()
+    {
+        if (instance != null)
+        {
+            if (instance.forceSource != null)
+            {
+                instance.forceSource.Stop();
+                instance.forceSource.clip = instance.ForceField;
+                instance.forceSource.Play();
             }
         }
     }

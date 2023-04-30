@@ -735,6 +735,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: fd70c7955a86b9e4c8b5deb45c4f5b02, type: 3}
     - target: {fileID: 1093852311530034875, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
+      propertyPath: ForceField
+      value: 
+      objectReference: {fileID: 8300000, guid: d737b842e338a92498e7b6cba22b8f0c, type: 3}
+    - target: {fileID: 1093852311530034875, guid: 30b3dd5fc932b9d4f9152fcb9c3fa432, type: 3}
       propertyPath: oxygenBeep
       value: 
       objectReference: {fileID: 8300000, guid: eb76805db0c00004abbd9c2c3617d300, type: 3}
