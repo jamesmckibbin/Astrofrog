@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &28315312650165078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9090258698723629942}
+  - component: {fileID: 8214223835588782631}
+  m_Layer: 0
+  m_Name: FrogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9090258698723629942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28315312650165078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -75.90637, y: -1.1079886, z: -0.1441494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8214223835588782631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28315312650165078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45030b3392d6db2428d1957e839a0f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astroFrog: {fileID: 11400000, guid: 167749ba799c76b4086bf6f2b54b2bb5, type: 2}
+  blastroFrog: {fileID: 11400000, guid: 21f67222cb400b740bb9ab2b8181397b, type: 2}
+  gastroFrog: {fileID: 11400000, guid: ba136c1e3c771f3479ab3988261c82ab, type: 2}
+  dastroFrog: {fileID: 11400000, guid: 212fbd8130d07534dbc3c95b8558d9d6, type: 2}
+  choice: 0
+  tongueSpeed: 0
+  pullSpeed: 0
+  frogIdle: {fileID: 0}
+  frogStretch: {fileID: 0}

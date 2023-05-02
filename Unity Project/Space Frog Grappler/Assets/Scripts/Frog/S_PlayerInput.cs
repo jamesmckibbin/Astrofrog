@@ -15,9 +15,24 @@ public class S_PlayerInput : MonoBehaviour
 
     Gamepad gamepad = Gamepad.current;
 
+    public Sprite playerSpriteIdle;
+    public Sprite playerSpriteMove;
+    private SpriteRenderer spriteR;
+    public float velo = 0;
+
+    void Start()
+    {
+        spriteR = gameObject.GetComponent<SpriteRenderer>();
+        playerSpriteIdle = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().frogIdle;
+        playerSpriteMove = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().frogStretch;
+
+        spriteR.sprite = playerSpriteIdle;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        velo = gameObject.GetComponent<Rigidbody2D>().velocity.magnitude;
         if (gamepad != null)
             gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time*4.5f) + 0.2f); //Makes tongue button pulse
 
@@ -44,6 +59,15 @@ public class S_PlayerInput : MonoBehaviour
         {
             GameObject.Find("AudioManager").GetComponent<S_AudioManager>().CroakSFX();
         }
+
+        if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= 2.0)
+        {
+            spriteR.sprite = playerSpriteMove;
+        }
+        else if(gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 2.0)
+        {
+            spriteR.sprite = playerSpriteIdle;
+        }
     }
 
     private void FixedUpdate()
@@ -57,4 +81,5 @@ public class S_PlayerInput : MonoBehaviour
             transform.eulerAngles += new Vector3(0, 0, (Input.GetAxisRaw("Vertical") * -keyboardMod * Time.fixedDeltaTime));
         }
     }
+    
 }
