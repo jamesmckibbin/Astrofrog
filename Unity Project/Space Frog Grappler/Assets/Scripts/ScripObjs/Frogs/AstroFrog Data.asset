@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6898c3effb6b04bb071c90471d8488, type: 3}
   m_Name: AstroFrog Data
   m_EditorClassIdentifier: 
-  tongueSpeed: 0
-  pullSpeed: 0
-  ligma: 0
+  tongueSpeedOut: 25
+  tongueSpeedIn: 100
+  pullSpeed: 10
+  tongueMax: 15
   frogIdle: {fileID: 21300000, guid: 93fd4f90d7ac56f4d91891d3c3150c99, type: 3}
   frogStretch: {fileID: 21300000, guid: e6a9a849f580d60428139a6269d15cb4, type: 3}

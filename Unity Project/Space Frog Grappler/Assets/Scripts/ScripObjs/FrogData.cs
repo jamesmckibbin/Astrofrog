@@ -5,9 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FrogData : ScriptableObject
 {
-   public float tongueSpeed;
+   public float tongueSpeedOut;
+   public float tongueSpeedIn;
    public float pullSpeed;
-   public float ligma;
+   public float clampSpeed;
+   public float tongueMax;
 
    public Sprite frogIdle;
    public Sprite frogStretch;

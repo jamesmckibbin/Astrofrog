@@ -12,11 +12,32 @@ public class S_TongueGrappling : MonoBehaviour
     [SerializeField] private float shootSpeed, retractSpeed, maxRange, tongueRange, tongueStrength, velClamp;
     [SerializeField] private LineRenderer tongueLR;
 
+    public float pullSpeed;
+    public float tongueSpeedIn;
+    public float tongueSpeedOut;
+    public float tongueMax;
+    public float clampSpeed;
+
     // Start is called before the first frame update
     void Awake()
     {
         S_PlayerInput.FireTongue += Shoot;
         S_PlayerInput.RetractTongue += Retract;
+
+        tongueSpeedIn = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().tongueSpeedIn;
+        tongueSpeedOut = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().tongueSpeedOut;
+        pullSpeed = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().pullSpeed;
+        clampSpeed = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().clampSpeed;
+        tongueMax = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().tongueMax;
+    }
+
+    void Start()
+    {
+        shootSpeed = tongueSpeedOut;
+        retractSpeed = tongueSpeedIn;
+        maxRange = tongueMax;
+        pullSpeed = tongueStrength;
+        velClamp = clampSpeed;
     }
 
     // Update is called once per frame

@@ -18,7 +18,6 @@ public class S_PlayerInput : MonoBehaviour
     public Sprite playerSpriteIdle;
     public Sprite playerSpriteMove;
     private SpriteRenderer spriteR;
-    public float velo = 0;
 
     void Start()
     {
@@ -32,7 +31,6 @@ public class S_PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velo = gameObject.GetComponent<Rigidbody2D>().velocity.magnitude;
         if (gamepad != null)
             gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time*4.5f) + 0.2f); //Makes tongue button pulse
 

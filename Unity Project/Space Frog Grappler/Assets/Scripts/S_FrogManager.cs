@@ -13,8 +13,11 @@ public class S_FrogManager : MonoBehaviour
 
     public int choice = 0;
 
-    public float tongueSpeed;
+    public float tongueSpeedIn;
+    public float tongueSpeedOut;
     public float pullSpeed;
+    public float clampSpeed;
+    public float tongueMax;
     public Sprite frogIdle;
     public Sprite frogStretch;
 
@@ -64,8 +67,11 @@ public class S_FrogManager : MonoBehaviour
 
     void updateFrog()
     {
-        tongueSpeed = currentFrog.tongueSpeed;
+        tongueSpeedIn = currentFrog.tongueSpeedIn;
+        tongueSpeedOut = currentFrog.tongueSpeedOut;
         pullSpeed = currentFrog.pullSpeed;
+        clampSpeed = currentFrog.clampSpeed;
+        tongueMax = currentFrog.tongueMax;
         frogIdle = currentFrog.frogIdle;
         frogStretch = currentFrog.frogStretch;
     }
