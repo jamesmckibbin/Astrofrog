@@ -28,98 +28,94 @@ public class S_FrogSelect : MonoBehaviour
         if (gamepad != null)
             gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time * 4.5f) + 0.2f); //Makes tongue button pulse
 
-        // Return to Main Menu
-        if (transform.localRotation.eulerAngles.z > 288 && transform.localRotation.eulerAngles.z < 360)
+        if (transform.localRotation.eulerAngles.z > 235 && transform.localRotation.eulerAngles.z < 305)
         { 
-            previewedFrog = 5;
+            previewedFrog = 4;
 
             if (chosenFrog == 4)
             {
                 selectedTextA.SetActive(false);
                 selectedTextBL.SetActive(false);
-                selectedTextD.SetActive(false);
-                selectedTextFan.SetActive(true);
+                selectedTextFan.SetActive(false);
+                selectedTextD.SetActive(true);
             }
             else
             {
                 selectedTextA.SetActive(false);
                 selectedTextBL.SetActive(false);
-                selectedTextD.SetActive(false);
                 selectedTextFan.SetActive(false);
+                selectedTextD.SetActive(false);
             }
         }
 
-        // Level 3
-        else if (transform.localRotation.eulerAngles.z > 216 && transform.localRotation.eulerAngles.z < 288)
+        else if (transform.localRotation.eulerAngles.z > 160 && transform.localRotation.eulerAngles.z < 235)
         { 
-            previewedFrog = 4;
+            previewedFrog = 3;
 
             if (chosenFrog == 3)
             {
                 selectedTextA.SetActive(false);
                 selectedTextBL.SetActive(false);
-                selectedTextD.SetActive(true);
-                selectedTextFan.SetActive(false);
+                selectedTextFan.SetActive(true);
+                selectedTextD.SetActive(false);
             }
             else
             {
                 selectedTextA.SetActive(false);
                 selectedTextBL.SetActive(false);
-                selectedTextD.SetActive(false);
                 selectedTextFan.SetActive(false);
+                selectedTextD.SetActive(false);
             }
         }
 
-        // Level 2
-        else if (transform.localRotation.eulerAngles.z > 144 && transform.localRotation.eulerAngles.z < 216)
+        else if (transform.localRotation.eulerAngles.z > 90 && transform.localRotation.eulerAngles.z < 160)
         { 
-            previewedFrog = 3;
+            previewedFrog = 2;
 
             if (chosenFrog == 2)
             {
                 selectedTextA.SetActive(false);
                 selectedTextBL.SetActive(true);
-                selectedTextD.SetActive(false);
                 selectedTextFan.SetActive(false);
+                selectedTextD.SetActive(false);
             }
             else
             {
                 selectedTextA.SetActive(false);
                 selectedTextBL.SetActive(false);
-                selectedTextD.SetActive(false);
                 selectedTextFan.SetActive(false);
+                selectedTextD.SetActive(false);
             }
         }
 
-        // Level 1
-        else if (transform.localRotation.eulerAngles.z > 72 && transform.localRotation.eulerAngles.z < 144)
+        else if (transform.localRotation.eulerAngles.z > 20 && transform.localRotation.eulerAngles.z < 90)
         { 
-            previewedFrog = 2;
+            previewedFrog = 1;
 
             if (chosenFrog == 1)
             {
                 selectedTextA.SetActive(true);
                 selectedTextBL.SetActive(false);
-                selectedTextD.SetActive(false);
                 selectedTextFan.SetActive(false);
+                selectedTextD.SetActive(false);
             }
             else
             {
                 selectedTextA.SetActive(false);
                 selectedTextBL.SetActive(false);
-                selectedTextD.SetActive(false);
                 selectedTextFan.SetActive(false);
+                selectedTextD.SetActive(false);
             }
         }
 
-        else if (transform.localRotation.eulerAngles.z > 0 && transform.localRotation.eulerAngles.z < 72)
+        else if (transform.localRotation.eulerAngles.z > 20 || transform.localRotation.eulerAngles.z < 305)
         { 
-            previewedFrog = 1;
+            previewedFrog = 5;
 
             selectedTextA.SetActive(false);
             selectedTextBL.SetActive(false);
-            selectedTextD.SetActive(false);
             selectedTextFan.SetActive(false);
+            selectedTextD.SetActive(false);
         }
 
         if (Input.GetButtonDown("Tongue"))
@@ -130,26 +126,45 @@ public class S_FrogSelect : MonoBehaviour
             {
                 case 1:
                     GameObject.Find("FrogManager").GetComponent<S_FrogManager>().choice = 1;
+                    chosenFrog = 1;
 
+                    selectedTextA.SetActive(true);
+                    selectedTextBL.SetActive(false);
+                    selectedTextFan.SetActive(false);
+                    selectedTextD.SetActive(false);
                     break;
 
                 case 2:
                     GameObject.Find("FrogManager").GetComponent<S_FrogManager>().choice = 2;
+                    chosenFrog = 2;
 
+                    selectedTextA.SetActive(false);
+                    selectedTextBL.SetActive(true);
+                    selectedTextFan.SetActive(false);
+                    selectedTextD.SetActive(false);
                     break;
 
                 case 3:
                     GameObject.Find("FrogManager").GetComponent<S_FrogManager>().choice = 3;
+                    chosenFrog = 3;
 
+                    selectedTextA.SetActive(false);
+                    selectedTextBL.SetActive(false);
+                    selectedTextFan.SetActive(true);
+                    selectedTextD.SetActive(false);
                     break;
 
                 case 4:
                     GameObject.Find("FrogManager").GetComponent<S_FrogManager>().choice = 4;
+                    chosenFrog = 4;
 
+                    selectedTextA.SetActive(false);
+                    selectedTextBL.SetActive(false);
+                    selectedTextFan.SetActive(false);
+                    selectedTextD.SetActive(true);
                     break;
                 case 5:
                     StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.TitleScreen));
-
                     break;
 
                 default:
