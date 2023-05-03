@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/CompletedLevel.unity
     guid: f603e2b053f148a468be967ae010311e
   - enabled: 1
+    path: Assets/Scenes/UI/FrogSelector.unity
+    guid: 674669dfc4932e740b79211f940f8b83
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: 7c67f4ac95ad78d44b65b27ace5498cd
   m_configObjects: {}

@@ -25,7 +25,7 @@ public class S_TitleWheel : MonoBehaviour
             if (transform.localRotation.eulerAngles.z > 270 && transform.localRotation.eulerAngles.z < 360)
             {
                 GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ClickSFX();
-                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Level_1));
+                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.SelectLevel));
             }
             // Exit
             else if (transform.localRotation.eulerAngles.z > 180 && transform.localRotation.eulerAngles.z < 270)
@@ -33,17 +33,17 @@ public class S_TitleWheel : MonoBehaviour
                 GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ClickSFX();
                 Application.Quit();
             }
-            // Levels
+            //Credits
             else if (transform.localRotation.eulerAngles.z > 90 && transform.localRotation.eulerAngles.z < 180)
             {
                 GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ClickSFX();
-                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.SelectLevel));
+                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Credits));
             }
-            // Credits
+            // FrogSwitcher
             else if (transform.localRotation.eulerAngles.z > 0 && transform.localRotation.eulerAngles.z < 90)
             {
                 GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ClickSFX();
-                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Credits));
+                StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.SelectFrog));
             }
         }
     }
