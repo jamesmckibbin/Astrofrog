@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6898c3effb6b04bb071c90471d8488, type: 3}
   m_Name: DastroFrog Data
   m_EditorClassIdentifier: 
-  tongueSpeed: 0
-  pullSpeed: 0
-  ligma: 0
+  tongueSpeedOut: 20
+  tongueSpeedIn: 75
+  pullSpeed: 0.85
+  clampSpeed: 7
+  tongueMax: 40
+  bouncy: 0.9
   frogIdle: {fileID: 21300000, guid: 9dd5b14efafa61c4c8a80fb8b18e9af1, type: 3}
   frogStretch: {fileID: 21300000, guid: a8abf66ea59b9fe4c8d427413d66acfa, type: 3}

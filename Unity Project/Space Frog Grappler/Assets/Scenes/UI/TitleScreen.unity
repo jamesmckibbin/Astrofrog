@@ -642,6 +642,10 @@ PrefabInstance:
       propertyPath: mainMenuMusic
       value: 
       objectReference: {fileID: 8300000, guid: 7ef6dc4fcd7854e43958a0e666d1dc69, type: 3}
+    - target: {fileID: 3414769224443990278, guid: 37403c357eb810744b6f0eb034ecafdd, type: 3}
+      propertyPath: frogSelectMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a6366a6e8da94044bdbd49a3adb1ed4, type: 3}
     - target: {fileID: 3414769224443990279, guid: 37403c357eb810744b6f0eb034ecafdd, type: 3}
       propertyPath: m_Volume
       value: 0.3

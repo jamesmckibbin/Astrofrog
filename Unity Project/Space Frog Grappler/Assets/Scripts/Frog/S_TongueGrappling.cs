@@ -12,7 +12,6 @@ public class S_TongueGrappling : MonoBehaviour
     [SerializeField] private float shootSpeed, retractSpeed, maxRange, tongueRange, tongueStrength, velClamp;
     [SerializeField] private LineRenderer tongueLR;
 
-    public float pullSpeed;
     public float tongueSpeedIn;
     public float tongueSpeedOut;
     public float tongueMax;
@@ -26,7 +25,6 @@ public class S_TongueGrappling : MonoBehaviour
 
         tongueSpeedIn = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().tongueSpeedIn;
         tongueSpeedOut = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().tongueSpeedOut;
-        pullSpeed = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().pullSpeed;
         clampSpeed = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().clampSpeed;
         tongueMax = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().tongueMax;
     }
@@ -36,7 +34,6 @@ public class S_TongueGrappling : MonoBehaviour
         shootSpeed = tongueSpeedOut;
         retractSpeed = tongueSpeedIn;
         maxRange = tongueMax;
-        pullSpeed = tongueStrength;
         velClamp = clampSpeed;
     }
 

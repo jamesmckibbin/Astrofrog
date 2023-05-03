@@ -148,6 +148,7 @@ MonoBehaviour:
   tongueSpeedIn: 0
   tongueSpeedOut: 0
   tongueMax: 0
+  clampSpeed: 0
 --- !u!50 &1872477948718107916
 Rigidbody2D:
   serializedVersion: 4
@@ -378,8 +379,10 @@ MonoBehaviour:
   turntableMod: 875000
   keyboardMod: 250
   WaitForTongue: 0
+  rb: {fileID: 1872477949694520905}
   playerSpriteIdle: {fileID: 0}
   playerSpriteMove: {fileID: 0}
+  mass: 0
 --- !u!50 &1872477949694520905
 Rigidbody2D:
   serializedVersion: 4

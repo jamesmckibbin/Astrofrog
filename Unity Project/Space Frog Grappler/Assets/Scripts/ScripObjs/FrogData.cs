@@ -10,6 +10,7 @@ public class FrogData : ScriptableObject
    public float pullSpeed;
    public float clampSpeed;
    public float tongueMax;
+   public float bouncy;
 
    public Sprite frogIdle;
    public Sprite frogStretch;

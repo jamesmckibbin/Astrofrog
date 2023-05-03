@@ -19,6 +19,7 @@ TagManager:
   - Checkpoint
   - WinMusic
   - GameoverMusic
+  - FrogChooseMusic
   layers:
   - Default
   - TransparentFX

@@ -31324,6 +31324,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frogRot: 0
+  bouncy: 0
+  bounce: {fileID: 6200000, guid: 4fa61c7f12c7fc5488402611c1149d9c, type: 2}
+  noBounce: {fileID: 6200000, guid: 6f6e329e378627b4fab4a2879d6030bb, type: 2}
+  normal: {fileID: 6200000, guid: dfe97aa1245a54a468375d83a26b2888, type: 2}
+  col: {fileID: 741943074}
 --- !u!1001 &863774578
 PrefabInstance:
   m_ObjectHideFlags: 0

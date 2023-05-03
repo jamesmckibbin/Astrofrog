@@ -18,6 +18,8 @@ public class S_FrogManager : MonoBehaviour
     public float pullSpeed;
     public float clampSpeed;
     public float tongueMax;
+    public float bouncy;
+
     public Sprite frogIdle;
     public Sprite frogStretch;
 
@@ -72,6 +74,7 @@ public class S_FrogManager : MonoBehaviour
         pullSpeed = currentFrog.pullSpeed;
         clampSpeed = currentFrog.clampSpeed;
         tongueMax = currentFrog.tongueMax;
+        bouncy = currentFrog.bouncy;
         frogIdle = currentFrog.frogIdle;
         frogStretch = currentFrog.frogStretch;
     }

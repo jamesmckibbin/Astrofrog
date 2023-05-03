@@ -21,7 +21,7 @@ public class S_FrogSelect : MonoBehaviour
     Gamepad gamepad = Gamepad.current;
 
     public int previewedFrog;
-    public int chosenFrog = 1;
+    public int chosenFrog;
 
     void Update()
     {

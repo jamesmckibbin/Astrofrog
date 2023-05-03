@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using System.Linq.Expressions;
 
 public class S_PlayerInput : MonoBehaviour
 {
@@ -15,8 +16,11 @@ public class S_PlayerInput : MonoBehaviour
 
     Gamepad gamepad = Gamepad.current;
 
+    public Rigidbody2D rb;
+
     public Sprite playerSpriteIdle;
     public Sprite playerSpriteMove;
+    public float mass;
     private SpriteRenderer spriteR;
 
     void Start()
@@ -24,8 +28,11 @@ public class S_PlayerInput : MonoBehaviour
         spriteR = gameObject.GetComponent<SpriteRenderer>();
         playerSpriteIdle = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().frogIdle;
         playerSpriteMove = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().frogStretch;
+        mass = GameObject.Find("FrogManager").GetComponent<S_FrogManager>().pullSpeed;
 
         spriteR.sprite = playerSpriteIdle;
+
+        rb.mass = mass;
     }
 
     // Update is called once per frame
