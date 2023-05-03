@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: 818d8170f3cb8cc4188abb65d0735429
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tileset_Asteroid_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -5}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b19bef67bf9b248ac3955210cda75e
+      internalID: 618447409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7035bf772379df4f9ee82fd99328d99
+      internalID: -1129527492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: -64}
+        - {x: -2, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9320bec0560241d4ba041eb2e3c27429
+      internalID: 147212049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdd9319ead99c64f82cfba526db0074
+      internalID: -1096421477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9c08bfcc6cce045946d8cead48c1c5
+      internalID: 1298141989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268613a0e8a19024f8331c899a433f4b
+      internalID: 805614662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2871499a40fb2f43bf88fb524581fb1
+      internalID: -1041734767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ec8d0b31b9a5046b524965e23fc3c2
+      internalID: 21336002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c9bb6e78bc55d4a8903641a5dea9cc
+      internalID: -839362431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: 64}
+        - {x: 0, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac644bc602778a468f6dacfbc574af2
+      internalID: -935830922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c288f69d737446458091f722a316cc2
+      internalID: -1101604851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: 0}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: -64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194bb91df715e2d4ca8ede970efaa033
+      internalID: 809898878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf27fd16c04e8974587df04349505ae7
+      internalID: 2144352405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tileset_Asteroid_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827be7ff7947bf64681da1bb302dbe5c
+      internalID: -638815086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tileset_Asteroid_0: -386814168
+      Tileset_Asteroid_1: -1427607953
+      Tileset_Asteroid_10: -839362431
+      Tileset_Asteroid_11: -935830922
+      Tileset_Asteroid_12: -1101604851
+      Tileset_Asteroid_13: 809898878
+      Tileset_Asteroid_2: 618447409
+      Tileset_Asteroid_3: -1129527492
+      Tileset_Asteroid_4: 147212049
+      Tileset_Asteroid_5: -1096421477
+      Tileset_Asteroid_6: 1298141989
+      Tileset_Asteroid_7: 805614662
+      Tileset_Asteroid_8: -1041734767
+      Tileset_Asteroid_9: 21336002
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
