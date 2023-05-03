@@ -32,6 +32,8 @@ public class S_FrogManager : MonoBehaviour
             Destroy(this);
             return;
         }
+
+        choice = 1;
     }
 
     void FixedUpdate()

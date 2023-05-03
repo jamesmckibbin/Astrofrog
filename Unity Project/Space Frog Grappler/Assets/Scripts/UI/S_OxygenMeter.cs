@@ -43,6 +43,10 @@ public class S_OxygenMeter : MonoBehaviour
         else if (CurrentOxygen < MaxOxygenValue * 0.2)
         {
             OxygenMeterBar.GetComponent<Image>().color = lowHealthColor;
+        }
+
+        else if(CurrentOxygen < MaxOxygenValue * 0.3)
+        {
             beepSlow = true;
             beepFast = false;
         }
@@ -63,11 +67,10 @@ public class S_OxygenMeter : MonoBehaviour
             beepFast = false;
         }
 
-        if (CurrentOxygen < MaxOxygenValue * 0.15)
+        if (CurrentOxygen < MaxOxygenValue * 0.12)
         {
             beepSlow = false;
             beepFast = true;
-            print(beepFast);
         }
 
         oxygenMeter.maxValue = MaxOxygenValue;

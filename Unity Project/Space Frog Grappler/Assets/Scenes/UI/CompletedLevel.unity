@@ -444,7 +444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177967905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.52, y: -3.73, z: 0}
+  m_LocalPosition: {x: -4.35, y: -4.23, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -478,7 +478,7 @@ RectTransform:
   m_GameObject: {fileID: 1207013293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8001, y: 0.8001, z: 0.9998999}
+  m_LocalScale: {x: 0.49710202, y: 0.49710202, z: 0.62123764}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1913725551}
@@ -486,8 +486,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184.76749, y: -183.93}
-  m_SizeDelta: {x: 326.83, y: 82.13}
+  m_AnchoredPosition: {x: 9, y: -150.7}
+  m_SizeDelta: {x: 1254.77, y: 82.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207013295
 MonoBehaviour:
@@ -511,8 +511,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press        to return to level selection
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -670,7 +670,7 @@ RectTransform:
   m_GameObject: {fileID: 1326327991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6432803, y: 0.6432803, z: 0.6432803}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1913725551}
@@ -678,8 +678,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 160}
-  m_SizeDelta: {x: 700, y: 100}
+  m_AnchoredPosition: {x: 11, y: 133}
+  m_SizeDelta: {x: 1042.37, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1326327993
 MonoBehaviour:
@@ -703,8 +703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mission Complete!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -805,7 +805,7 @@ RectTransform:
   m_GameObject: {fileID: 1369168681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5850831, y: 0.5850831, z: 0.5850831}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1913725551}
@@ -813,8 +813,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 150}
+  m_AnchoredPosition: {x: -28.849998, y: 41.61199}
+  m_SizeDelta: {x: 1000.96, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369168683
 MonoBehaviour:
@@ -840,8 +840,8 @@ MonoBehaviour:
 
     Your time: 0 seconds! (...?)'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

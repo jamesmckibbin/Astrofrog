@@ -260,8 +260,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "James McKibbin\t\nLead Programmer"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -397,8 +397,8 @@ MonoBehaviour:
 
     Technical Designer, Enemy/Object Programmer'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -668,8 +668,8 @@ MonoBehaviour:
 
     Environment/UI Artist, Producer'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1352,8 +1352,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Willow O'Hara\r\nSystems Designer\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1487,8 +1487,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1624,8 +1624,8 @@ MonoBehaviour:
 
     Level Designer'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1761,8 +1761,8 @@ MonoBehaviour:
 
     Character/Prop Artist'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
+  m_sharedMaterial: {fileID: 3761142301813842155, guid: a16d65dae81287c4c946ba697ee9a8dc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

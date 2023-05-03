@@ -25,7 +25,6 @@ public class S_TitleWheel : MonoBehaviour
             if (transform.localRotation.eulerAngles.z > 270 && transform.localRotation.eulerAngles.z < 360)
             {
                 GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ClickSFX();
-                GameObject.Find("FrogManager").GetComponent<S_FrogManager>().choice = 4;
                 StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.Level_1));
             }
             // Exit
