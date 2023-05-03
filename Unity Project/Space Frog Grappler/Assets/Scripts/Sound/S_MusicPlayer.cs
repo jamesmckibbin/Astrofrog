@@ -15,6 +15,7 @@ public class S_MusicPlayer : MonoBehaviour
     public AudioClip victoryMusic;
     public AudioClip gameOverMusic;
     public AudioClip frogSelectMusic;
+    public AudioClip level2Music;
 
     //Creates an audiomanager instance and and audiosurce
     private static S_MusicPlayer instance;
@@ -72,7 +73,7 @@ public class S_MusicPlayer : MonoBehaviour
         }
         else if (GameObject.FindWithTag("WinMusic"))
         {
-            if (source.clip != selectMusic)
+            if (source.clip != victoryMusic)
             {
                 instance.source.Stop();
                 instance.source.clip = instance.victoryMusic;
@@ -81,7 +82,7 @@ public class S_MusicPlayer : MonoBehaviour
         }
         else if (GameObject.FindWithTag("GameoverMusic"))
         {
-            if (source.clip != selectMusic)
+            if (source.clip != gameOverMusic)
             {
                 instance.source.Stop();
                 instance.source.clip = instance.gameOverMusic;
@@ -90,10 +91,19 @@ public class S_MusicPlayer : MonoBehaviour
         }
         else if (GameObject.FindWithTag("FrogChooseMusic"))
         {
-            if (source.clip != selectMusic)
+            if (source.clip != frogSelectMusic)
             {
                 instance.source.Stop();
                 instance.source.clip = instance.frogSelectMusic;
+                instance.source.Play();
+            }
+        }
+        else if (GameObject.FindWithTag("Level2Music"))
+        {
+            if (source.clip != level2Music)
+            {
+                instance.source.Stop();
+                instance.source.clip = instance.level2Music;
                 instance.source.Play();
             }
         }

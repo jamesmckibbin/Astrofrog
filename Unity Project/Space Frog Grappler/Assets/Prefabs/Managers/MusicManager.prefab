@@ -48,6 +48,10 @@ MonoBehaviour:
   mainMenuMusic: {fileID: 8300000, guid: 7ef6dc4fcd7854e43958a0e666d1dc69, type: 3}
   level1Music: {fileID: 8300000, guid: 64b2da3f22a0cb042a98327cf98d7514, type: 3}
   selectMusic: {fileID: 8300000, guid: 6ec71ea5ddf6c2f46ab9de5eb5d339cc, type: 3}
+  victoryMusic: {fileID: 8300000, guid: 6ab4f956e00a3134ca39b57207abcc1f, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 272f9145f2923b0499513799aa2cb72c, type: 3}
+  frogSelectMusic: {fileID: 8300000, guid: 1a6366a6e8da94044bdbd49a3adb1ed4, type: 3}
+  level2Music: {fileID: 8300000, guid: 1b7f1785736c8cb498050aab0895e7d5, type: 3}
 --- !u!82 &3414769224443990279
 AudioSource:
   m_ObjectHideFlags: 0
