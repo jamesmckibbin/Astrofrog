@@ -562,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 4
   movementAngle: 20
+  facingRight: 0
 --- !u!50 &474500650
 Rigidbody2D:
   serializedVersion: 4
@@ -1017,6 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   movementAngle: 90
+  facingRight: 0
 --- !u!50 &836710106
 Rigidbody2D:
   serializedVersion: 4
@@ -1119,6 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   movementAngle: 210
+  facingRight: 0
 --- !u!50 &840852481
 Rigidbody2D:
   serializedVersion: 4
@@ -1221,6 +1224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   movementAngle: 330
+  facingRight: 0
 --- !u!50 &881535556
 Rigidbody2D:
   serializedVersion: 4
@@ -1987,6 +1991,7 @@ GameObject:
   - component: {fileID: 1502771431}
   - component: {fileID: 1502771430}
   - component: {fileID: 1502771432}
+  - component: {fileID: 1502771433}
   m_Layer: 7
   m_Name: Asteroids
   m_TagString: Tongueable
@@ -19276,6 +19281,24 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
+--- !u!114 &1502771433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502771428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9347c9556b32e5f499153a03a31cee8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frogRot: 0
+  bouncy: 0
+  bounce: {fileID: 6200000, guid: 4fa61c7f12c7fc5488402611c1149d9c, type: 2}
+  noBounce: {fileID: 6200000, guid: 6f6e329e378627b4fab4a2879d6030bb, type: 2}
+  normal: {fileID: 6200000, guid: dfe97aa1245a54a468375d83a26b2888, type: 2}
+  col: {fileID: 1502771432}
 --- !u!1001 &1534154482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19923,6 +19946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 4
   movementAngle: 0
+  facingRight: 0
 --- !u!50 &1698131997
 Rigidbody2D:
   serializedVersion: 4
@@ -20160,7 +20184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1872477949694520951, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6677881333570750629, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
       propertyPath: m_IsActive
