@@ -9,6 +9,7 @@ public class S_PauseWheel : MonoBehaviour
 {
     public S_SceneSwitcher SceneSwitcher;
     public SceneInfo SceneIndexes;
+    public S_PauseOptions pauseOptions;
 
     [SerializeField] private float turntableMod = 875000;
     [SerializeField] private float keyboardMod = 250;
@@ -40,7 +41,7 @@ public class S_PauseWheel : MonoBehaviour
                      (transform.localEulerAngles.z > 300 && transform.localEulerAngles.z < 360))
             {
                 print("Resume");
-                GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ClickSFX();
+                pauseOptions.PauseToggle();
             }
         }
     }

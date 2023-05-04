@@ -23,6 +23,8 @@ public class S_PlayerInput : MonoBehaviour
     public float mass;
     private SpriteRenderer spriteR;
 
+    [SerializeField] private S_PauseOptions pauseOptions;
+
     void Start()
     {
         spriteR = gameObject.GetComponent<SpriteRenderer>();
@@ -38,52 +40,51 @@ public class S_PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gamepad != null)
-            gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time*4.5f) + 0.2f); //Makes tongue button pulse
-
-        if(Input.GetButtonDown("Tongue"))
+        if (pauseOptions.GamePaused == false)
         {
-            if (!WaitForTongue)
+            if (gamepad != null)
+                gamepad.SetMotorSpeeds(0, Mathf.Sin(Time.time * 4.5f) + 0.2f); //Makes tongue button pulse
+            if (Input.GetButtonDown("Tongue"))
             {
-                FireTongue?.Invoke();
-                WaitForTongue = true;
+                if (!WaitForTongue)
+                {
+                    FireTongue?.Invoke();
+                    WaitForTongue = true;
+                }
             }
-        }
-
-        if (Input.GetButtonUp("Tongue"))
-        {
-            RetractTongue?.Invoke();
-        }
-
-        if (Input.GetButtonUp("Tongue"))
-        {
-            RetractTongue?.Invoke();
-        }
-
-        if (Input.GetButtonDown("Croak"))
-        {
-            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().CroakSFX();
-        }
-
-        if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= 2.0)
-        {
-            spriteR.sprite = playerSpriteMove;
-        }
-        else if(gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 2.0)
-        {
-            spriteR.sprite = playerSpriteIdle;
+            if (Input.GetButtonUp("Tongue"))
+            {
+                RetractTongue?.Invoke();
+            }
+            if (Input.GetButtonDown("Croak"))
+            {
+                GameObject.Find("AudioManager").GetComponent<S_AudioManager>().CroakSFX();
+            }
+            if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= 2.0)
+            {
+                spriteR.sprite = playerSpriteMove;
+            }
+            else if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude < 2.0)
+            {
+                spriteR.sprite = playerSpriteIdle;
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (!(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
+        if (pauseOptions.GamePaused == false)
         {
-            transform.eulerAngles += new Vector3(0, 0, (Input.GetAxisRaw("Vertical") * -turntableMod * Time.fixedDeltaTime));
-        }
-        else
-        {
-            transform.eulerAngles += new Vector3(0, 0, (Input.GetAxisRaw("Vertical") * -keyboardMod * Time.fixedDeltaTime));
+            if (!(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)))
+            {
+                transform.eulerAngles += new Vector3(0, 0,
+                    (Input.GetAxisRaw("Vertical") * -turntableMod * Time.fixedDeltaTime));
+            }
+            else
+            {
+                transform.eulerAngles +=
+                    new Vector3(0, 0, (Input.GetAxisRaw("Vertical") * -keyboardMod * Time.fixedDeltaTime));
+            }
         }
     }
     

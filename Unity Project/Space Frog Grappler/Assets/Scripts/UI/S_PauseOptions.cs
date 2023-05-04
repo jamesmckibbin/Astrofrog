@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class S_PauseOptions : MonoBehaviour
 {
+    public bool GamePaused = false;
+
     [SerializeField] GameObject pauseMenu;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Croak"))
         {
             PauseToggle();
         }
@@ -20,13 +22,12 @@ public class S_PauseOptions : MonoBehaviour
     {
         if (pauseMenu.activeSelf == false)
         {
-            Time.timeScale = 0.0f;
+            GamePaused = true;
             pauseMenu.SetActive(true);
         }
-
         else
         {
-            Time.timeScale = 1.0f;
+            GamePaused = false;
             pauseMenu.SetActive(false);
         }
     }
