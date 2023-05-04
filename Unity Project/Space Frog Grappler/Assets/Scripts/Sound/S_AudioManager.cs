@@ -107,7 +107,6 @@ public class S_AudioManager : MonoBehaviour
                 instance.source.clip = instance.TongueRetract;
                 source.pitch = randomChoice;
                 instance.source.Play();
-                source.pitch = 1.0f;
             }
         }
     }
