@@ -18,6 +18,7 @@ public class S_JetpackEffect : MonoBehaviour
     {
         if (PackinTime)
         {
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().JetSFXOn();
             //Propels the frog forward if their speed in the direction they're facing isn't at a set amount.
             float velocityInDirection = Vector3.Dot(frogRb.velocity, transform.up);
 
@@ -39,5 +40,6 @@ public class S_JetpackEffect : MonoBehaviour
 
         PackinTime = false;
         nitroJet.Stop();
+        GameObject.Find("AudioManager").GetComponent<S_AudioManager>().JetSFXOff();
     }
 }

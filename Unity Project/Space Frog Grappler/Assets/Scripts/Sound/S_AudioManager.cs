@@ -19,8 +19,11 @@ public class S_AudioManager : MonoBehaviour
     public AudioClip Croak;
     public AudioClip oxygenBeep;
     public AudioClip ForceField;
+    public AudioClip poison;
 
     public float randomChoice = 0;
+    public GameObject jetSource;
+
 
     //Creates an audiomanager instance and and audiosurce
     public AudioSource source;
@@ -29,6 +32,7 @@ public class S_AudioManager : MonoBehaviour
     public AudioSource bonkSource;
     public AudioSource oxygenSource;
     public AudioSource forceSource;
+    public AudioSource poisonSource;
     private static S_AudioManager instance;
 
     public void Awake()
@@ -68,13 +72,12 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                randomChoice = UnityEngine.Random.Range(0.8f, 1.2f);
+                randomChoice = UnityEngine.Random.Range(0.8f, 3f);
 
                 instance.source.Stop();
                 instance.source.clip = instance.TongueLaunch;
                 source.pitch = randomChoice;
                 instance.source.Play();
-                source.pitch = 1.0f;
             }
         }
     }
@@ -98,7 +101,7 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
-                randomChoice = UnityEngine.Random.Range(0.8f, 1.2f);
+                randomChoice = UnityEngine.Random.Range(0.8f, 3f);
 
                 instance.source.Stop();
                 instance.source.clip = instance.TongueRetract;
@@ -115,6 +118,7 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.bonkSource != null)
             {
+                source.pitch = 1.0f;
                 instance.bonkSource.Stop();
                 instance.bonkSource.clip = instance.Bonk;
                 instance.bonkSource.Play();
@@ -128,9 +132,9 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
+                source.pitch = 1.0f;
                 instance.source.Stop();
                 instance.source.clip = instance.menuHover;
-                source.pitch = 1.0f;
                 instance.source.Play();
             }
         }
@@ -142,6 +146,7 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.source != null)
             {
+                source.pitch = 1.0f;
                 instance.source.Stop();
                 instance.source.clip = instance.menuClick;
                 source.pitch = 1.0f;
@@ -156,6 +161,7 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.croakSource != null)
             {
+                source.pitch = 1.0f;
                 instance.croakSource.Stop();
                 instance.croakSource.clip = instance.Croak;
                 instance.croakSource.Play();
@@ -169,6 +175,7 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.oxygenSource != null)
             {
+                source.pitch = 1.0f;
                 instance.oxygenSource.Stop();
                 instance.oxygenSource.clip = instance.oxygenBeep;
                 instance.oxygenSource.Play();
@@ -182,10 +189,35 @@ public class S_AudioManager : MonoBehaviour
         {
             if (instance.forceSource != null)
             {
+                source.pitch = 1.0f;
                 instance.forceSource.Stop();
                 instance.forceSource.clip = instance.ForceField;
                 instance.forceSource.Play();
             }
         }
+    }
+
+    public void PoisonSFX()
+    {
+        if (instance != null)
+        {
+            if (instance.poisonSource != null)
+            {
+                source.pitch = 1.0f;
+                instance.poisonSource.Stop();
+                instance.poisonSource.clip = instance.poison;
+                instance.poisonSource.Play();
+            }
+        }
+    }
+
+    public void JetSFXOn()
+    {
+        jetSource.SetActive(true);
+    }
+
+    public void JetSFXOff()
+    {
+        jetSource.SetActive(false);    
     }
 }

@@ -121,7 +121,7 @@ public class S_TongueGrappling : MonoBehaviour
             }
             else if(collision.gameObject.CompareTag("FlyPoisonous"))
             {
-
+                GameObject.Find("AudioManager").GetComponent<S_AudioManager>().PoisonSFX();
             }
         }
     }

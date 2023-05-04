@@ -20,6 +20,7 @@ TagManager:
   - WinMusic
   - GameoverMusic
   - FrogChooseMusic
+  - Level3Music
   layers:
   - Default
   - TransparentFX

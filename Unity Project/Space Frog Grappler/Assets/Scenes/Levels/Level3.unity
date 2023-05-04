@@ -7439,6 +7439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomID
       objectReference: {fileID: 0}
+    - target: {fileID: 6422804823636166362, guid: 50d67412a52224b488386bdfcd9a9252, type: 3}
+      propertyPath: m_TagString
+      value: Level3Music
+      objectReference: {fileID: 0}
     - target: {fileID: 6422804823636166363, guid: 50d67412a52224b488386bdfcd9a9252, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -29762,6 +29766,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frogRot: 0
+  bouncy: 0
+  bounce: {fileID: 0}
+  noBounce: {fileID: 0}
+  normal: {fileID: 0}
+  col: {fileID: 0}
 --- !u!1 &4559146543495860259
 GameObject:
   m_ObjectHideFlags: 0
