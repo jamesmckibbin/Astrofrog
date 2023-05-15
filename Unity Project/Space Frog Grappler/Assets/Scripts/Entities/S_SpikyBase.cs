@@ -10,6 +10,8 @@ public class S_SpikyBase : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             col.gameObject.GetComponent<S_PlayerHurt>().Pain();
+
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ForceFieldSFX();
         }
 
         //Also hurts the frog if they hit it with their tongue.
@@ -18,6 +20,8 @@ public class S_SpikyBase : MonoBehaviour
             col.gameObject.GetComponent<S_TongueGrappling>().Retract();
 
             GameObject.Find("Frog").GetComponent<S_PlayerHurt>().Pain();
+
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ForceFieldSFX();
         }
     }
 }

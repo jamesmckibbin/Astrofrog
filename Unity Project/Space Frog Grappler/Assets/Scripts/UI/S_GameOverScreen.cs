@@ -11,6 +11,11 @@ public class S_GameOverScreen : MonoBehaviour
     public SceneInfo SceneIndexes;
     Gamepad gamepad = Gamepad.current;
 
+    void Start()
+    {
+        GameObject.Find("AudioManager").GetComponent<S_AudioManager>().JetSFXOff();
+    }
+
     void Update()
     {
         if (gamepad != null)

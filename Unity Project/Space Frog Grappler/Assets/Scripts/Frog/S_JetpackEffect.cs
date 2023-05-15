@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class S_JetpackEffect : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class S_JetpackEffect : MonoBehaviour
     public ParticleSystem nitroJet;
 
     public void JetpackStart(float duration2)
-    {StartCoroutine(JetpackDuration(duration2));}
+    { StartCoroutine(JetpackDuration(duration2)); }
 
     //Propulsion for when the jetpack is active.
     void FixedUpdate()
@@ -29,13 +30,13 @@ public class S_JetpackEffect : MonoBehaviour
             }
 
             else
-            {nitroJet.Stop();}
+            { nitroJet.Stop(); }
         }
     }
 
     //Stops the jetpack after its duration ends.
     private IEnumerator JetpackDuration(float duration3)
-    {  
+    {
         yield return new WaitForSeconds(duration3);
 
         PackinTime = false;

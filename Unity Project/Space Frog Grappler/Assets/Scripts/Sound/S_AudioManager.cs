@@ -51,7 +51,7 @@ public class S_AudioManager : MonoBehaviour
         randomChoice = UnityEngine.Random.Range(0.8f, 3f);
     }
 
-        //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
+    //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
 
     public void ChompSFX()
     {

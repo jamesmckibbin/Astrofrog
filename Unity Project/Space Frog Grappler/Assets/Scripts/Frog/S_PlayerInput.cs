@@ -87,5 +87,14 @@ public class S_PlayerInput : MonoBehaviour
             }
         }
     }
-    
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Plays different sound effects based on which type bad surface the tongue touches
+        if (collision.gameObject.CompareTag("FlyPoisonous"))
+        {
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().PoisonSFX();
+        }
+    }
 }
