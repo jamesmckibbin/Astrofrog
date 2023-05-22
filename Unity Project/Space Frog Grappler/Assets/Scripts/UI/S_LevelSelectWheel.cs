@@ -16,6 +16,11 @@ public class S_LevelSelectWheel : MonoBehaviour
 
     public int previewedLevel;
 
+    void Start()
+    {
+        GameObject.Find("AudioManager").GetComponent<S_AudioManager>().JetSFXOff();
+    }
+
     void Update()
     {
         if (gamepad != null)

@@ -16,7 +16,7 @@ MonoBehaviour:
   tongueSpeedIn: 130
   pullSpeed: 0.5
   clampSpeed: 30
-  tongueMax: 7
+  tongueMax: 8.5
   bouncy: 0.4
   frogIdle: {fileID: 21300000, guid: fbd013c1ca808354eaf154f4949592b7, type: 3}
   frogStretch: {fileID: 21300000, guid: bc1ffcc590b2f0840ad17b2ea2560530, type: 3}

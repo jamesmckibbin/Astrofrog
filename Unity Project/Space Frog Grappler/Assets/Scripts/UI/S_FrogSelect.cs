@@ -16,6 +16,11 @@ public class S_FrogSelect : MonoBehaviour
     public GameObject selectedTextFan;
     public GameObject selectedTextD;
 
+    public GameObject infoTextA;
+    public GameObject infoTextBl;
+    public GameObject infoTextFan;
+    public GameObject infoTextD;
+
     [SerializeField] private float turntableMod = 875000;
     [SerializeField] private float keyboardMod = 250;
     Gamepad gamepad = Gamepad.current;
@@ -31,6 +36,11 @@ public class S_FrogSelect : MonoBehaviour
         if (transform.localRotation.eulerAngles.z > 235 && transform.localRotation.eulerAngles.z < 305)
         { 
             previewedFrog = 4;
+
+            infoTextA.SetActive(false);
+            infoTextBl.SetActive(false);
+            infoTextFan.SetActive(false);
+            infoTextD.SetActive(true);
 
             if (chosenFrog == 4)
             {
@@ -52,6 +62,11 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 3;
 
+            infoTextA.SetActive(false);
+            infoTextBl.SetActive(false);
+            infoTextFan.SetActive(true);
+            infoTextD.SetActive(false);
+
             if (chosenFrog == 3)
             {
                 selectedTextA.SetActive(false);
@@ -71,6 +86,11 @@ public class S_FrogSelect : MonoBehaviour
         else if (transform.localRotation.eulerAngles.z > 90 && transform.localRotation.eulerAngles.z < 160)
         { 
             previewedFrog = 2;
+
+            infoTextA.SetActive(false);
+            infoTextBl.SetActive(true);
+            infoTextFan.SetActive(false);
+            infoTextD.SetActive(false);
 
             if (chosenFrog == 2)
             {
@@ -92,6 +112,11 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 1;
 
+            infoTextA.SetActive(true);
+            infoTextBl.SetActive(false);
+            infoTextFan.SetActive(false);
+            infoTextD.SetActive(false);
+
             if (chosenFrog == 1)
             {
                 selectedTextA.SetActive(true);
@@ -111,6 +136,11 @@ public class S_FrogSelect : MonoBehaviour
         else if (transform.localRotation.eulerAngles.z > 20 || transform.localRotation.eulerAngles.z < 305)
         { 
             previewedFrog = 5;
+
+            infoTextA.SetActive(false);
+            infoTextBl.SetActive(false);
+            infoTextFan.SetActive(false);
+            infoTextD.SetActive(false);
 
             selectedTextA.SetActive(false);
             selectedTextBL.SetActive(false);

@@ -14,6 +14,7 @@ public class S_SceneSwitcher : MonoBehaviour
 
     public IEnumerator LoadScene(int levelIndex)
     {
+        GameObject.Find("AudioManager").GetComponent<S_AudioManager>().JetSFXOff();
         transition.SetTrigger("End");
         yield return new WaitForSecondsRealtime(1.0f);
         SceneManager.LoadScene(levelIndex);
