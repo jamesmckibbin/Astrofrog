@@ -19548,8 +19548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5674eb0ad9155184db0c09ecffeb283a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidExplosion: {fileID: 0}
-  shipExplosion: {fileID: 0}
+  asteroidExplosion: {fileID: 6771321138728156742, guid: 21b5c0c4d57ca27499d671afac4491d0, type: 3}
+  shipExplosion: {fileID: 6771321138728156742, guid: 6c597fd31da9bb44e9ff892c95224aa8, type: 3}
 --- !u!1 &1611689154
 GameObject:
   m_ObjectHideFlags: 0
