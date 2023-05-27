@@ -30,13 +30,17 @@ public class S_PufferFly : MonoBehaviour
         if (Vector2.Distance(transform.position, frog.transform.position) >= 7.0f)
         {
             gameObject.tag = "FlyEdible";
+
             flyBody.color = Color.white;
+            transform.localScale = new Vector3 (0.4f, 0.4f, 0.4f);
         }
         
         else
         {
             gameObject.tag = "FlyPoisonous";
+
             flyBody.color = Color.green;
+            transform.localScale = new Vector3 (0.6f, 0.6f, 0.6f);
         }
     }
 }

@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class S_Impact_Effect_Spawn : MonoBehaviour
+//Produces a special impact effect if you collide with a wall hard enough.
+//This one is used for the asteroid tileset, producing dust.
+public class S_Impact_Effect_Spawn_Asteroid : MonoBehaviour
 {
     [SerializeField] GameObject asteroidExplosion;
-    [SerializeField] GameObject shipExplosion;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Tongue")) //If the player hits the object, it plays a bonk sound effect.
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Tongue"))
         {
-            if (GameObject.Find("Frog").GetComponent<Rigidbody2D>().velocity.magnitude > 0.1)
+            if (GameObject.Find("Frog").GetComponent<Rigidbody2D>().velocity.magnitude > 3)
             {
                 Instantiate(asteroidExplosion, new Vector3 (collision.GetContact(0).point.x, collision.GetContact(0).point.y, 0),
                 new Quaternion (0.0f, 0.0f, 0.0f, 1.0f));

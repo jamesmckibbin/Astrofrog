@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 741943070}
   - component: {fileID: 741943074}
   - component: {fileID: 741943075}
+  - component: {fileID: 741943076}
   m_Layer: 7
   m_Name: Wall
   m_TagString: Tongueable
@@ -31447,6 +31448,19 @@ MonoBehaviour:
   noBounce: {fileID: 6200000, guid: 6f6e329e378627b4fab4a2879d6030bb, type: 2}
   normal: {fileID: 6200000, guid: dfe97aa1245a54a468375d83a26b2888, type: 2}
   col: {fileID: 741943074}
+--- !u!114 &741943076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741943068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28419689d2818348a4b28e13a0a8bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipExplosion: {fileID: 6771321138728156742, guid: 6c597fd31da9bb44e9ff892c95224aa8, type: 3}
 --- !u!95 &961602776 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6677881333570750632, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
