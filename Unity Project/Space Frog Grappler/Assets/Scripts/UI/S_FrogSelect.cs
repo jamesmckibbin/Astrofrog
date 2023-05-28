@@ -34,7 +34,7 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 4;
 
-            infoText.text = ("+ Long tongue range" + System.Environment.NewLine + System.Environment.NewLine + "- Very bouncy");
+            infoText.text = ("+ Ultra long tongue range" + System.Environment.NewLine + System.Environment.NewLine + "- Very bouncy");
             infoText.color = new Color(0.8f, 0.0f, 1.0f, 1.0f);
 
             if (chosenFrog == 4)
@@ -80,7 +80,7 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 2;
 
-            infoText.text = ("Fast tongue and movement speed" + System.Environment.NewLine + System.Environment.NewLine + "Short tongue range");
+            infoText.text = ("+ Fast tongue and movement speed" + System.Environment.NewLine + System.Environment.NewLine + "- Short tongue range");
             infoText.color = new Color(0.0f, 0.7f, 1.0f, 1.0f);
 
             if (chosenFrog == 2)
