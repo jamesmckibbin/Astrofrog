@@ -16,10 +16,7 @@ public class S_FrogSelect : MonoBehaviour
     public GameObject selectedTextFan;
     public GameObject selectedTextD;
 
-    public GameObject infoTextA;
-    public GameObject infoTextBl;
-    public GameObject infoTextFan;
-    public GameObject infoTextD;
+    public TextMeshProUGUI infoText;
 
     [SerializeField] private float turntableMod = 875000;
     [SerializeField] private float keyboardMod = 250;
@@ -37,10 +34,8 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 4;
 
-            infoTextA.SetActive(false);
-            infoTextBl.SetActive(false);
-            infoTextFan.SetActive(false);
-            infoTextD.SetActive(true);
+            infoText.text = ("+ Long tongue range" + System.Environment.NewLine + System.Environment.NewLine + "- Very bouncy");
+            infoText.color = new Color(0.8f, 0.0f, 1.0f, 1.0f);
 
             if (chosenFrog == 4)
             {
@@ -62,10 +57,8 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 3;
 
-            infoTextA.SetActive(false);
-            infoTextBl.SetActive(false);
-            infoTextFan.SetActive(true);
-            infoTextD.SetActive(false);
+            infoText.text = ("+ Less bouncy" + System.Environment.NewLine + System.Environment.NewLine + "- Slow tongue speed");
+            infoText.color = new Color(1.0f, 1.0f, 0.0f, 1.0f);
 
             if (chosenFrog == 3)
             {
@@ -87,10 +80,8 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 2;
 
-            infoTextA.SetActive(false);
-            infoTextBl.SetActive(true);
-            infoTextFan.SetActive(false);
-            infoTextD.SetActive(false);
+            infoText.text = ("Fast tongue and movement speed" + System.Environment.NewLine + System.Environment.NewLine + "Short tongue range");
+            infoText.color = new Color(0.0f, 0.7f, 1.0f, 1.0f);
 
             if (chosenFrog == 2)
             {
@@ -112,10 +103,8 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 1;
 
-            infoTextA.SetActive(true);
-            infoTextBl.SetActive(false);
-            infoTextFan.SetActive(false);
-            infoTextD.SetActive(false);
+            infoText.text = ("+ Jack of all trades" + System.Environment.NewLine + System.Environment.NewLine + "- Master of none");
+            infoText.color = new Color(0.0f, 1.0f, 0.1f, 1.0f);
 
             if (chosenFrog == 1)
             {
@@ -137,10 +126,8 @@ public class S_FrogSelect : MonoBehaviour
         { 
             previewedFrog = 5;
 
-            infoTextA.SetActive(false);
-            infoTextBl.SetActive(false);
-            infoTextFan.SetActive(false);
-            infoTextD.SetActive(false);
+            infoText.text = ("");
+            infoText.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
             selectedTextA.SetActive(false);
             selectedTextBL.SetActive(false);
