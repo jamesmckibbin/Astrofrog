@@ -24,6 +24,8 @@ public class S_AudioManager : MonoBehaviour
     public float randomChoice = 0;
     public GameObject jetSource;
 
+    public float playerMagni;
+
 
     //Creates an audiomanager instance and and audiosurce
     public AudioSource source;
@@ -49,6 +51,14 @@ public class S_AudioManager : MonoBehaviour
         }
 
         randomChoice = UnityEngine.Random.Range(0.8f, 3f);
+    }
+
+    void Update()
+    {
+        if(GameObject.Find("Frog") != null)
+        {
+            playerMagni = GameObject.Find("Frog").GetComponent<Rigidbody2D>().velocity.magnitude;
+        }
     }
 
     //Each one of these is an individual sound effect player. When you call one of these functions you can play its respective sound effect.
@@ -120,6 +130,7 @@ public class S_AudioManager : MonoBehaviour
                 source.pitch = 1.0f;
                 instance.bonkSource.Stop();
                 instance.bonkSource.clip = instance.Bonk;
+                instance.bonkSource.volume = playerMagni / 30f;
                 instance.bonkSource.Play();
             }
         }

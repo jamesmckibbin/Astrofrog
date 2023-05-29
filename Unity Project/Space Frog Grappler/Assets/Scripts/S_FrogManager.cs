@@ -22,6 +22,7 @@ public class S_FrogManager : MonoBehaviour
 
     public Sprite frogIdle;
     public Sprite frogStretch;
+    public Sprite frogTank;
 
     private static S_FrogManager instance;
 
@@ -77,5 +78,6 @@ public class S_FrogManager : MonoBehaviour
         bouncy = currentFrog.bouncy;
         frogIdle = currentFrog.frogIdle;
         frogStretch = currentFrog.frogStretch;
+        frogTank = currentFrog.frogTank;
     }
 }

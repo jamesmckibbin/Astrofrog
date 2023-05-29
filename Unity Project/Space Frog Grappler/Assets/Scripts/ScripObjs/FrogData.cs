@@ -14,4 +14,5 @@ public class FrogData : ScriptableObject
 
    public Sprite frogIdle;
    public Sprite frogStretch;
+   public Sprite frogTank;
 }

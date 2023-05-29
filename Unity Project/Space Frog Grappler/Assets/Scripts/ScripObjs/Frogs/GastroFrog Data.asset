@@ -20,3 +20,4 @@ MonoBehaviour:
   bouncy: 0.1
   frogIdle: {fileID: 21300000, guid: 3d5b4709d0691bd4b8b7ae9014eb8dd4, type: 3}
   frogStretch: {fileID: 21300000, guid: c06011101194a704d8a28656a0a76cca, type: 3}
+  frogTank: {fileID: 21300000, guid: fc6cb672a7904ec41910525a3ed022f9, type: 3}
