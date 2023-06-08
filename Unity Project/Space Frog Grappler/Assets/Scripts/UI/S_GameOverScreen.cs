@@ -23,6 +23,7 @@ public class S_GameOverScreen : MonoBehaviour
 
         if (Input.GetButtonDown("Tongue"))
         {
+            GameObject.Find("AudioManager").GetComponent<S_AudioManager>().ClickSFX();
             StartCoroutine(SceneSwitcher.LoadScene(SceneIndexes.SelectLevel));
         }
     }
