@@ -53,7 +53,7 @@ public class S_SavedStats : MonoBehaviour
                 lineTime = "Best time: Not set!";
             }
 
-            else if (bestTimeToCheck == 0.0f)
+            else if (bestTimeToCheck == 999999.0f)
             {
                 lineFlies = "Flies eaten: " + bestFliesToCheck + " / " + maxFliesToCheck;
                 lineTime = "Best time: Not set!";

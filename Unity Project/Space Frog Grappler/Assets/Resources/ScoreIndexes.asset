@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2a2bc8e02a31540a836455023eed0d, type: 3}
   m_Name: ScoreIndexes
   m_EditorClassIdentifier: 
-  MaxLevel1: 0
-  MaxLevel2: 0
-  MaxLevel3: 0
-  BestLevel1: 0
-  BestLevel2: 0
-  BestLevel3: 0
+  MaxFlies1: 0
+  MaxFlies2: 0
+  MaxFlies3: 0
+  BestFlies1: 0
+  BestFlies2: 0
+  BestFlies3: 0
+  BestTime1: 999999
+  BestTime2: 999999
+  BestTime3: 999999
