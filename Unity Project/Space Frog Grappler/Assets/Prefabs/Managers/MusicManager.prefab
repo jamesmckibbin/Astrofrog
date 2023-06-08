@@ -52,6 +52,7 @@ MonoBehaviour:
   gameOverMusic: {fileID: 8300000, guid: 272f9145f2923b0499513799aa2cb72c, type: 3}
   frogSelectMusic: {fileID: 8300000, guid: 1a6366a6e8da94044bdbd49a3adb1ed4, type: 3}
   level2Music: {fileID: 8300000, guid: 1b7f1785736c8cb498050aab0895e7d5, type: 3}
+  level3Music: {fileID: 8300000, guid: 4e2e533c06aef4349b5d3dadf9edaf1d, type: 3}
 --- !u!82 &3414769224443990279
 AudioSource:
   m_ObjectHideFlags: 0

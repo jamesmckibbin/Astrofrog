@@ -116,7 +116,7 @@ public class S_StatTracking : MonoBehaviour
                 if (fliesEaten > bestFliesToCheck)
                 {scoreIndexes.BestFlies1 = fliesEaten;}
 
-                if (SceneManager.GetActiveScene().name == "CompletedLevel" && endTime > bestTimeToCheck)
+                if (SceneManager.GetActiveScene().name == "CompletedLevel" && endTime < bestTimeToCheck)
                 {scoreIndexes.BestTime1 = endTime;}
                 break;
 
@@ -126,7 +126,7 @@ public class S_StatTracking : MonoBehaviour
                 if (fliesEaten > bestFliesToCheck)
                 {scoreIndexes.BestFlies2 = fliesEaten;}
 
-                if (SceneManager.GetActiveScene().name == "CompletedLevel" && endTime > bestTimeToCheck)
+                if (SceneManager.GetActiveScene().name == "CompletedLevel" && endTime < bestTimeToCheck)
                 {scoreIndexes.BestTime2 = endTime;}
                 break;
 
@@ -136,7 +136,7 @@ public class S_StatTracking : MonoBehaviour
                 if (fliesEaten > bestFliesToCheck)
                 {scoreIndexes.BestFlies3 = fliesEaten;}
 
-                if (SceneManager.GetActiveScene().name == "CompletedLevel" && endTime > bestTimeToCheck)
+                if (SceneManager.GetActiveScene().name == "CompletedLevel" && endTime < bestTimeToCheck)
                 {scoreIndexes.BestTime3 = endTime;}
                 break;
 
