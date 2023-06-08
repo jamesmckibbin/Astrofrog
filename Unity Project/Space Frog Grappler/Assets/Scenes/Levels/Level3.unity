@@ -7015,6 +7015,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 558418420072581915, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 558418420072581915, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1872477948718107912, guid: 6572df88f7f6dcb4eb959791e8734d04, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
@@ -46980,8 +46988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.2204, y: -79}
-  m_SizeDelta: {x: 139.3093, y: 101.1537}
+  m_AnchoredPosition: {x: -4.2204, y: -300}
+  m_SizeDelta: {x: 278.6186, y: 202.3074}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!483693784 &6484594293878517362
 TilemapRenderer:
