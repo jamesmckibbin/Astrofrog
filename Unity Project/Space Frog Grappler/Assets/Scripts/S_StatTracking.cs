@@ -66,7 +66,6 @@ public class S_StatTracking : MonoBehaviour
         yield return 0;
 
         flyTotal = GameObject.Find("Text_Fly_Counter").GetComponent<S_FlyCounter>().flyTotal;
-        print(flyTotal);
     }
 
     //Regularly grabs how many flies have been eaten. 
