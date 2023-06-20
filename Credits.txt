@@ -1,0 +1,25 @@
+Music/Sound Credits:
+
+all music by Pocket Sound – https://pocket-se.info/
+
+
+
+
+AstroFrog uses these sounds from freesound:
+
+
+Bite (Cartoon Style) by Jofae | License: Creative Commons 0
+
+Cartoon - Slurp! by Breviceps | License: Creative Commons 0
+
+Bounce by JustInvoke | License: Attribution 4.0
+
+Frog.ogg by egomassive | License: Creative Commons 0
+
+UI_3-3 FHSandal sinus(Sytrus,arpegio,multiprocessing,rsmpl).wav by newlocknew | License: Attribution 4.0
+
+Deflector Shield by Metzik | License: Attribution 4.0
+
+poison debuff.wav by TerryTom | License: Attribution NonCommercial 3.0
+
+Compressed Air 3.wav by Geoff-Bremner-Audio | License: Creative Commons 0
