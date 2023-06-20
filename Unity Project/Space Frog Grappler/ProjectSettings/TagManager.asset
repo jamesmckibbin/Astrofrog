@@ -21,6 +21,7 @@ TagManager:
   - GameoverMusic
   - FrogChooseMusic
   - Level3Music
+  - Level2Music
   layers:
   - Default
   - TransparentFX

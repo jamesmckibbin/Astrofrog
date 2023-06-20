@@ -18,6 +18,7 @@ public class S_MusicPlayer : MonoBehaviour
     public AudioClip level2Music;
     public AudioClip level3Music;
 
+
     //Creates an audiomanager instance and and audiosurce
     private static S_MusicPlayer instance;
     private AudioSource source;
@@ -40,8 +41,13 @@ public class S_MusicPlayer : MonoBehaviour
         source = GameObject.Find("MusicManager").GetComponent<AudioSource>();
     }
 
-    //This function loads in a different music track if it finds an object in the scene with one of the music tags. Each level will have a music tag that this function will use to determine which music to play.
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        MusicChange();
+    }
+
+    //This function loads in a different music track if it finds an object in the scene with one of the music tags. Each level will have a music tag that this function will use to determine which music to play.
+    public void MusicChange()
     {
         source = GameObject.Find("MusicManager").GetComponent<AudioSource>();
 
