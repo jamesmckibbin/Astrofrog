@@ -20,12 +20,12 @@ public class S_CameraFollow : MonoBehaviour
     //Moves the camera towards the frog, utilizing the position we just grabbed.
     //"Distance / 10" enables smooth movement - as the distance to the frog gets smaller each frame, the camera slows down.
     //Puts the result in a Vector3 first so that we can correct the Z value before sending it off to the camera's transform
-    void Update()
+    void FixedUpdate()
     {
         if (GameObject.FindWithTag("Player") == true)
         {
             frogVectors = Vector3.MoveTowards(transform.position, frogTransform.position,
-            Mathf.Abs(Vector2.Distance(transform.position, frogTransform.position)) / 6);
+            Mathf.Abs(Vector2.Distance(transform.position, frogTransform.position)) / 10);
 
             frogVectors.z = -10.0f;
             transform.position = frogVectors;
